@@ -78,7 +78,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://github.com/ufabc-next"
+                href="https://github.com/org-nexus-projects"
                 className="text-gray-400 hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -60,14 +60,14 @@ const LandingPage = () => {
     },
     {
       id: 4,
-      title: "next AI",
+      title: "Next AI",
       description: "Assistente inteligente com IA para responder dúvidas acadêmicas de forma personalizada",
       icon: "./projects/Ai.png",
       link: "/projetos/whatsapp-bot-ai"
     },
     {
       id: 5,
-      title: "cronos",
+      title: "UFABC Cronos",
       description: "Planejador de graduação personalizado para ajudar os alunos a montarem a grade que mais vai gerar valor para a sua carreira e vida pessoal",
       icon: "./projects/cronos-project.png",
       link: "/projetos/cronos"

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Github } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -82,14 +83,14 @@ export default function NavBar() {
 
   const projectsDropdown = [
     { label: "WhatsApp Bot", href: "/projetos/whatsapp-bot" },
-    { label: "next AI", href: "/projetos/whatsapp-bot-ai" },
-    { label: "ufabc parser", href: "/projetos/ufabc-parser" },
-    { label: "ufabc next", href: "/projetos/ufabc-next" },
-    { label: "aulões next", href: "/projetos/auloes-next" },
+    { label: "Next AI", href: "/projetos/whatsapp-bot-ai" },
+    { label: "UFABC parser", href: "/projetos/ufabc-parser" },
+    { label: "UFABC next", href: "/projetos/ufabc-next" },
+    { label: "Aulões Next", href: "/projetos/auloes-next" },
   ];
 
   const docsDropdown = [  
-    { label: "Ufabc parser", href: "https://ufabc-parser.com/docs" },
+    { label: "UFABC parser", href: "https://ufabc-parser.com/docs" },
   
   ];
 
@@ -104,13 +105,10 @@ export default function NavBar() {
               className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
             >
               <img 
-                src="/nexus-logo-gradient.svg" 
+                src="/nexus-logo-black.png" 
                 alt="Nexus Logo" 
-                className="h-7 w-7" 
+                className="h-7 w-auto" 
               />
-              <span className="text-[19px] font-bold tracking-tight text-foreground">
-                Nexus
-              </span>
             </Link>
           </div>
           
@@ -142,13 +140,12 @@ export default function NavBar() {
           <div className="hidden lg:flex items-center gap-6">
             {/* GitHub Link - Minimal */}
             <a 
-              href="https://github.com/ufabc-next" 
+              href="https://github.com/org-nexus-projects" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2.5 px-4 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 text-[14px] font-medium"
             >
               <Github className="h-4 w-4 opacity-70" />
-              <span>1.2k</span>
             </a>
 
             {/* CTA Button - Clean */}
@@ -157,7 +154,7 @@ export default function NavBar() {
               className="rounded-lg px-5 py-2 font-medium text-[14px] shadow-sm hover:shadow transition-all duration-200"
               asChild
             >
-              <a href="/#comunidade">Cadastrar</a>
+              <a href="/#comunidade">Junte-se a nós</a>
             </Button>
           </div>
 
