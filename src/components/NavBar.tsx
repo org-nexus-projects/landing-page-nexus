@@ -82,8 +82,8 @@ export default function NavBar() {
   ];
 
   const projectsDropdown = [
-    { label: "WhatsApp Bot", href: "/projetos/whatsapp-bot" },
-    { label: "TamanduAI", href: "/projetos/whatsapp-bot-ai" },
+    { label: "Communications", href: "/projetos/communications" },
+    { label: "TamanduAI", href: "/projetos/tamanduai" },
     { label: "UFABC parser", href: "/projetos/ufabc-parser" },
     { label: "UFABC next", href: "/projetos/ufabc-next" },
     { label: "Aulões Next", href: "/projetos/auloes-next" },
