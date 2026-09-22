@@ -48,7 +48,7 @@ const LandingPage = () => {
       id: 2,
       title: "Parser",
       description: "Fornecemos todas as informações relevantes para o desenvolvimento universitário da UFABC em formato de API",
-      icon: "./projects/parser-icon.png",
+      icon: "./projects/parser-logo.png",
       link: "/projetos/ufabc-parser"
     },
     {
