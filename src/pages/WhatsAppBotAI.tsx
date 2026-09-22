@@ -3,9 +3,9 @@ import { ProjectPage } from "@/components/ProjectPage";
 
 const WhatsAppBotAI = () => (
   <ProjectPage
-    logo="/projects/Ai.png"
-    logoAlt="next AI"
-    title="next AI"
+    logo="/projects/tamanduai.jpeg"
+    logoAlt="TamanduAI"
+    title="TamanduAI"
     tagline="Seu assistente acadêmico inteligente, no WhatsApp."
     description="Mais do que comandos: converse naturalmente sobre dúvidas acadêmicas, planejamento de carreira e vida na UFABC. A IA entende contexto, faz recomendações e aprende com a comunidade."
     stats={[
