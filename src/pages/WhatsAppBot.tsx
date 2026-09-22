@@ -4,8 +4,8 @@ import { ProjectPage } from "@/components/ProjectPage";
 const WhatsAppBot = () => (
   <ProjectPage
     logo="/projects/whatsapp-bot.webp"
-    logoAlt="WhatsApp Bot UFABC Next"
-    title="WhatsApp Bot"
+    logoAlt="Communications UFABC Next"
+    title="Communications"
     tagline="Informações acadêmicas da UFABC direto no seu WhatsApp."
     description="Sem precisar abrir múltiplos sistemas universitários: consulte horários, turmas, prazos e notificações importantes com comandos simples pelo app que você já usa todo dia."
     stats={[

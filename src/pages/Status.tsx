@@ -32,7 +32,7 @@ const SERVICES: Service[] = [
     checkUrl: "https://api.v2.ufabcnext.com/health",
   },
   {
-    name: "UFABC Parser",
+    name: "Parser",
     description: "Dados acadêmicos estruturados da UFABC",
     url: "https://ufabc-parser.com",
     checkUrl: "https://ufabc-parser.com/v2",

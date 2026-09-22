@@ -4,8 +4,8 @@ import { ProjectPage } from "@/components/ProjectPage";
 const UfabcParser = () => (
   <ProjectPage
     logo="/projects/parser-logo.png"
-    logoAlt="UFABC Parser"
-    title="UFABC Parser"
+    logoAlt="Parser"
+    title="Parser"
     tagline="Dados acadêmicos da UFABC, estruturados e acessíveis via API."
     description="Uma API open source que transforma as informações brutas dos sistemas da universidade em dados limpos, padronizados e prontos para uso por qualquer desenvolvedor ou pesquisador."
     stats={[
@@ -73,10 +73,10 @@ const UfabcParser = () => (
       },
     ]}
     ctaText="Ver no GitHub"
-    ctaHref="https://github.com/ufabc-next/ufabc-next-backend"
+    ctaHref="https://github.com/org-nexus-projects/ufabc-next-backend"
     secondaryCta={{
       text: "Documentação da API",
-      href: "https://github.com/ufabc-next/ufabc-next-backend",
+      href: "https://github.com/org-nexus-projects/ufabc-next-backend",
     }}
   />
 );

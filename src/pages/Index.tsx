@@ -46,21 +46,21 @@ const LandingPage = () => {
     },
     {
       id: 2,
-      title: "UFABC parser",
+      title: "Parser",
       description: "Fornecemos todas as informações relevantes para o desenvolvimento universitário da UFABC em formato de API",
-      icon: "./projects/parser-logo.png",
+      icon: "./projects/parser-icon.png",
       link: "/projetos/ufabc-parser"
     },
     {
       id: 3,
-      title: "WhatsApp Bot",
+      title: "Communications",
       description: "Criamos um bot do WhatsApp para facilitar o acesso dos alunos a informações acadêmicas importantes e manter a comunidade acadêmica conectada",
-      icon: "./projects/whatsapp-icon.jpg",
+      icon: "./projects/whatsapp-icon.png",
       link: "/projetos/whatsapp-bot"
     },
     {
       id: 4,
-      title: "next AI",
+      title: "TamanduAI",
       description: "Assistente inteligente com IA para responder dúvidas acadêmicas de forma personalizada",
       icon: "./projects/Ai.png",
       link: "/projetos/whatsapp-bot-ai"
