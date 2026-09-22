@@ -83,7 +83,7 @@ export default function NavBar() {
 
   const projectsDropdown = [
     { label: "WhatsApp Bot", href: "/projetos/whatsapp-bot" },
-    { label: "Next AI", href: "/projetos/whatsapp-bot-ai" },
+    { label: "TamanduAI", href: "/projetos/whatsapp-bot-ai" },
     { label: "UFABC parser", href: "/projetos/ufabc-parser" },
     { label: "UFABC next", href: "/projetos/ufabc-next" },
     { label: "Aulões Next", href: "/projetos/auloes-next" },
