@@ -73,10 +73,10 @@ const UfabcParser = () => (
       },
     ]}
     ctaText="Ver no GitHub"
-    ctaHref="https://github.com/ufabc-next/ufabc-next-backend"
+    ctaHref="https://github.com/org-nexus-projects/ufabc-next-backend"
     secondaryCta={{
       text: "Documentação da API",
-      href: "https://github.com/ufabc-next/ufabc-next-backend",
+      href: "https://github.com/org-nexus-projects/ufabc-next-backend",
     }}
   />
 );
