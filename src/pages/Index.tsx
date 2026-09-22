@@ -62,8 +62,8 @@ const LandingPage = () => {
       id: 4,
       title: "TamanduAI",
       description: "Assistente inteligente com IA para responder dúvidas acadêmicas de forma personalizada",
-      icon: "./projects/Ai.png",
-      link: "/projetos/whatsapp-bot-ai"
+      icon: "./projects/tamanduai.jpeg",
+      link: "/projetos/tamanduai"
     },
     {
       id: 5,

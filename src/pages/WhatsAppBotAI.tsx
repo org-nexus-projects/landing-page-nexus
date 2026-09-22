@@ -3,7 +3,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 
 const WhatsAppBotAI = () => (
   <ProjectPage
-    logo="/projects/Ai.png"
+    logo="/projects/tamanduai.jpeg"
     logoAlt="TamanduAI"
     title="TamanduAI"
     tagline="Seu assistente acadêmico inteligente, no WhatsApp."
