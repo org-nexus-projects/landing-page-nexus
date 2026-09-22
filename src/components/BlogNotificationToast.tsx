@@ -23,9 +23,9 @@ export function BlogNotificationToast({ onDismiss, onAction }: BlogNotificationT
         <div className="flex-shrink-0">
           <div className="w-11 h-11 rounded-full overflow-hidden ring-2 ring-gray-100">
             <img
-              src="/nexus-logo-gradient.svg"
+              src="/nexus-logo-blue-bg.png"
               alt="Nexus"
-              className="w-full h-full object-cover bg-gradient-to-br from-blue-100 to-blue-50 p-1.5"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

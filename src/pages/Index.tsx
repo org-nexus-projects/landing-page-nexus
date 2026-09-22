@@ -67,7 +67,7 @@ const LandingPage = () => {
     },
     {
       id: 5,
-      title: "cronos",
+      title: "UFABC Cronos",
       description: "Planejador de graduação personalizado para ajudar os alunos a montarem a grade que mais vai gerar valor para a sua carreira e vida pessoal",
       icon: "./projects/cronos-project.png",
       link: "/projetos/cronos"
