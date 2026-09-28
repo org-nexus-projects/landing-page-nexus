@@ -84,7 +84,7 @@ export const blogPostsDatabase: Record<string, BlogPost> = {
         readTime: "8 min de leitura",
         category: "Tecnologia",
         slug: "my-server-is-down-what-do-i-do",
-        tags: ["tecnologia", "servidor", "troubleshooting", "devops", "ufabc next"],
+        tags: ["tecnologia", "servidor", "troubleshooting", "devops", "UFABC Next"],
         content: `
 <p class="mb-4">
 Sexta-feira, 18hrs. Tudo indicava o fim de uma semana tranquila quando, de repente, chega a mensagem:
@@ -233,8 +233,8 @@ O volume utilizado era do tipo <strong>NVMe (Non-Volatile Memory Express)</stron
 
     "extension-ufabc-next": {
         id: "1",
-        title: "Quero atualizar meus dados no UFABC next, como faço?",
-        excerpt: "Um passo a passo para entender o funcionamento da extensão de atualização automática de dados do UFABC next.",
+        title: "Quero atualizar meus dados no UFABC Next, como faço?",
+        excerpt: "Um passo a passo para entender o funcionamento da extensão de atualização automática de dados do UFABC Next.",
         image: "/blog/blog-2/wallpaper/image.png",
         authors: [
 

@@ -13,7 +13,7 @@ const categories = [
   { id: "tutorials", label: "Tutoriais" },
   { id: "updates", label: "Atualizações" },
   { id: "events", label: "Eventos" }, 
-  { id: "next", label: "Ufabc next" }
+  { id: "next", label: "UFABC Next" }
 ];  
 
 // Get all blog posts from centralized data

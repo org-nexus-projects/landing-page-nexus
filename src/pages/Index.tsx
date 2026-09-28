@@ -39,7 +39,7 @@ const LandingPage = () => {
   const projects = [
     {
       id: 1,
-      title: "UFABC next",
+      title: "UFABC Next",
       description: "Construímos uma plataforma de avaliação de professores, disciplinas e programas com base na experiência dos alunos",
       icon: "./projects/next-logo.jpg",
       link: "/projetos/ufabc-next"
@@ -509,29 +509,6 @@ function BlogCard({ image, title, description, author, href }: BlogCardProps) {
                 {author.date}
               </p>
             </div>
-
-            {/* Bookmark Icon (Optional) */}
-            <button 
-              className="p-2 hover:bg-blue-50 rounded-lg transition-colors duration-200"
-              onClick={(e) => {
-                e.preventDefault();
-                // Bookmark functionality here
-              }}
-            >
-              <svg 
-                className="w-5 h-5 text-foreground/40 hover:text-blue-600 transition-colors" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={1.5} 
-                  d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" 
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </article>

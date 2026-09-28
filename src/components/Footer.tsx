@@ -7,14 +7,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3" style={{ gap: '15rem' }}>
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 mr-2">
                 <img
-                  src="/nexus-logo-gradient.svg"
-                  alt="Nexus Logo"
-                  className="w-full h-full"
+                  src="/nexus-logo-white.png"
+                  alt="Nexus"
+                  className="w-20 h-full"
                 />
-              </div>
-              <span className="text-xl font-bold">Nexus</span>
             </div>
             <p className="text-gray-400 mb-4">
               Uma iniciativa acadêmica para melhorar a experiência universitária na UFABC.
@@ -58,7 +55,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">Santo André, SP - Brasil</p>
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/ufabc_next/"
+                href="https://www.instagram.com/fundacao_nexus/"
                 className="text-gray-400 hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -103,7 +100,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400">
-            © 2025 Nexus. Todos os direitos reservados.
+            © 2026 Nexus. Todos os direitos reservados.
           </p>
         </div>
       </div>
