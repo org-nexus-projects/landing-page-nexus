@@ -1,5 +1,5 @@
 import { Calendar, Map, Target, TrendingUp, Layers, Lightbulb } from "lucide-react";
-import { ProjectPage } from "@/components/ProjectPage";
+import { ProjectPage } from "#components/project-page";
 
 const UfabcCronos = () => (
   <ProjectPage

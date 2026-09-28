@@ -1,19 +1,19 @@
-import NavBar from "@/components/NavBar";
-import SubmitDialog from "@/components/SubmitDialog";
-import Footer from "@/components/Footer";
+import NavBar from "#components/nav-bar";
+import SubmitDialog from "#components/submit-dialog";
+import Footer from "#components/footer";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
+} from "#components/ui/carousel";
+import { Button } from "#components/ui/button";
 import { useEffect } from "react";
 import { toast } from "sonner";
-import { BlogNotificationToast } from "@/components/BlogNotificationToast";
-import { projects } from "@/lib/constants";
-import { getVisiblePosts } from "@/data/blogPosts";
+import { BlogNotificationToast } from "#components/blog-notification-toast";
+import { projects } from "#lib/constants";
+import { getVisiblePosts } from "#data/blog-posts";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -292,7 +292,7 @@ const LandingPage = () => {
             <div className="flex justify-center">
               <div className="grid md:grid-cols-2 gap-x-8 gap-y-16 max-w-[900px]">
                 <BlogCard
-                  image="/blog/blog-1/wallpaper/resizing_machines.png"
+                  image="/blog/blog-1/wallpaper/resizing-machines.png"
                   title="Mayday, o next caiu! E agora?"
                   description="Um guia completo sobre como diagnosticar e resolver problemas de servidor, desde volumes EBS até gerenciamento de filesystem."
                   author={{

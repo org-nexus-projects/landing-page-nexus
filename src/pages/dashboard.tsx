@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
-import CourseCard from "@/components/CourseCard";
-import CardPreview from "@/components/CardPreview";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
+import Header from "#components/header";
+import Sidebar from "#components/sidebar";
+import CourseCard from "#components/course-card";
+import CardPreview from "#components/card-preview";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "#components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "#components/ui/select";
+import { Button } from "#components/ui/button";
 import { Link } from "react-router-dom";
 
 const coursesData = [

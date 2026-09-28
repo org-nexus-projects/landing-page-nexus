@@ -1,10 +1,10 @@
 import { useParams, Link } from "react-router-dom";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import NavBar from "#components/nav-bar";
+import Footer from "#components/footer";
+import { Button } from "#components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "#components/ui/avatar";
 import { ArrowLeft, Calendar, School, Share2, Twitter, Linkedin, Github, MapPin, AtSign, Check } from "lucide-react";
-import { getPostBySlug, type Author } from "@/data/blogPosts";
+import { getPostBySlug, type Author } from "#data/blog-posts";
 import { useState } from "react";
 import {
   Carousel,
@@ -12,7 +12,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "#components/ui/carousel";
 
 // Author Card Component
 function AuthorCard({ author }: { author: Author }) {

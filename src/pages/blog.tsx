@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { getVisiblePosts, type BlogPost } from "@/data/blogPosts";
-import { blog_categories } from "@/lib/constants";
+import NavBar from "#components/nav-bar";
+import Footer from "#components/footer";
+import { Button } from "#components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "#components/ui/avatar";
+import { getVisiblePosts, type BlogPost } from "#data/blog-posts";
+import { blog_categories } from "#lib/constants";
 
 // Get all blog posts from centralized data
 const blogPosts: BlogPost[] = getVisiblePosts();

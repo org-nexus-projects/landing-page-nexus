@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, RefreshCw } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "#components/ui/button";
 
 type ServiceStatus = "checking" | "operational" | "degraded" | "down";
 

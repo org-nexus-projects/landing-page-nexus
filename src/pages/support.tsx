@@ -1,18 +1,18 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import { useToast } from "#hooks/use-toast";
+import { Button } from "#components/ui/button";
+import { Input } from "#components/ui/input";
+import { Textarea } from "#components/ui/textarea";
+import { Label } from "#components/ui/label";
 import { 
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "#components/ui/select";
 import {
   Form,
   FormControl,
@@ -21,14 +21,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "#components/ui/form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Upload, FileText, AlertTriangle, Send } from "lucide-react";
-import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import Header from "#components/header";
+import Sidebar from "#components/sidebar";
+import { Alert, AlertDescription } from "#components/ui/alert";
 
 const formSchema = z.object({
   problemType: z.string({

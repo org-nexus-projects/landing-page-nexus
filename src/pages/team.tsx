@@ -1,15 +1,15 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import SubmitDialog from "@/components/SubmitDialog";
+import { Avatar, AvatarFallback, AvatarImage } from "#components/ui/avatar";
+import { Button } from "#components/ui/button";
+import SubmitDialog from "#components/submit-dialog";
 
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+} from "#components/ui/dialog";
+import NavBar from "#components/nav-bar";
+import Footer from "#components/footer";
 import { useState } from "react";
 
 export default function Team() {
@@ -69,7 +69,7 @@ export default function Team() {
       id: 8,
       name: "Pedro Tomaz",
       role: "Analista de estratégia",
-      image: "/members/PTomaz.png",
+      image: "/members/ptomaz.png",
       linkedin: "https://www.linkedin.com/in/pedro-tomaz-martins/",
       bio: "Analista estratégico e de negócios, com foco em identificar oportunidades de projetos e alavancar a organização dentro das metas definidas no longo prazo. Graduando em engenharia de gestão, hoje também faz parte do time da KPMG",
     },

@@ -7,10 +7,10 @@ import {
   Download,
   ExternalLink
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { Button } from "#components/ui/button";
+import { Progress } from "#components/ui/progress";
+import { Badge } from "#components/ui/badge";
+import { cn } from "#lib/utils";
 
 interface CourseCardProps {
   title: string;

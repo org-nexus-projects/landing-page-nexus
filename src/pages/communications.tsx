@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "#components/ui/button";
 import { ArrowLeft, MessageCircle, Bell, Users, Clock } from "lucide-react";
 
 const Communications = () => {

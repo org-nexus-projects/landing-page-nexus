@@ -1,5 +1,5 @@
 import { Star, Users, BookOpen, TrendingUp, BarChart2, Shield } from "lucide-react";
-import { ProjectPage } from "@/components/ProjectPage";
+import { ProjectPage } from "#components/project-page";
 
 const UfabcNext = () => (
   <ProjectPage

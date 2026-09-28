@@ -35,7 +35,7 @@ export const blogPostsDatabase: Record<string, BlogPost> = {
         id: "0",
         title: "Mayday, o next caiu! E agora?",
         excerpt: "Um guia completo sobre como diagnosticar e resolver problemas de servidor, desde volumes EBS até gerenciamento de filesystem no Linux.",
-        image: "/blog/blog-1/wallpaper/resizing_machines.png",
+        image: "/blog/blog-1/wallpaper/resizing-machines.png",
         authors: [
             {
                 name: "Gabriel Monteiro",

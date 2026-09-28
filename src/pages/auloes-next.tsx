@@ -1,5 +1,5 @@
 import { GraduationCap, Users, Calendar, BookOpen, Heart, Award } from "lucide-react";
-import { ProjectPage } from "@/components/ProjectPage";
+import { ProjectPage } from "#components/project-page";
 
 const AuloesNext = () => (
   <ProjectPage

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "#components/ui/button";
 import { ArrowLeft, MessageCircle, Sparkles, Brain, Zap } from "lucide-react";
 
 const TamanduAi = () => {

@@ -1,22 +1,20 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "#components/ui/toaster";
+import { Toaster as Sonner } from "#components/ui/sonner";
+import { TooltipProvider } from "#components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Support from "./pages/Support";
-import Dashboard from "./pages/Dashboard";
-import Team from "./pages/Team";
-import UfabcNext from "./pages/UfabcNext";
-import UfabcParser from "./pages/UfabcParser";
-import TamanduAi from "./pages/TamanduAi";
-import AuloesNext from "./pages/AuloesNext";
-import UfabcCronos from "./pages/UfabcCronos";
-import Status from "./pages/Status";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import Communications from "./pages/Communications";
+import Index from "./pages/index";
+import NotFound from "./pages/not-found";
+import Team from "./pages/team";
+import UfabcNext from "./pages/ufabc-next";
+import UfabcParser from "./pages/ufabc-parser";
+import TamanduAi from "./pages/tamandu-ai";
+import AuloesNext from "./pages/auloes-next";
+import UfabcCronos from "./pages/ufabc-cronos";
+import Status from "./pages/status";
+import Blog from "./pages/blog";
+import BlogPost from "./pages/blog-post";
+import Communications from "./pages/communications";
 
 const queryClient = new QueryClient();
 

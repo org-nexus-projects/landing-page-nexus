@@ -1,5 +1,5 @@
 import { Database, Code, Zap, GitBranch, RefreshCw, Lock } from "lucide-react";
-import { ProjectPage } from "@/components/ProjectPage";
+import { ProjectPage } from "#components/project-page";
 
 const UfabcParser = () => (
   <ProjectPage
