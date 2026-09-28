@@ -64,7 +64,7 @@ export function ProjectPage({
           <img
             src={logo}
             alt={logoAlt}
-            className="w-20 h-20 object-contain mx-auto mb-8 rounded-2xl"
+            className="w-32 h-32 object-contain mx-auto mb-8 rounded-2xl"
           />
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6">
             {title}

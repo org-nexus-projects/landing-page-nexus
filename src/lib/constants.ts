@@ -31,7 +31,7 @@ export const projects = [
       id: 5,
       title: "TamanduAI",
       description: "Assistente inteligente com IA para responder dúvidas acadêmicas de forma personalizada",
-      icon: "./projects/tamanduai.jpeg",
+      icon: "./projects/tamanduai.png",
       link: "/tamanduai"
     },
     {

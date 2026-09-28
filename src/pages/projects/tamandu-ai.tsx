@@ -3,7 +3,7 @@ import { ProjectPage } from "#components/project-page";
 
 const TamanduAi = () => (
   <ProjectPage
-    logo="/projects/tamanduai.jpeg"
+    logo="/projects/tamanduai.png"
     logoAlt="TamanduAI"
     title="TamanduAI"
     tagline="Assistente inteligente com IA para responder dúvidas acadêmicas de forma personalizada."
