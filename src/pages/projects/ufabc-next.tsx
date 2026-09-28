@@ -3,7 +3,7 @@ import { ProjectPage } from "#components/project-page";
 
 const UfabcNext = () => (
   <ProjectPage
-    logo="/projects/next-logo.jpg"
+    logo="/projects/ufabc-next-mascot.jpg"
     logoAlt="UFABC Next"
     title="UFABC Next"
     tagline="A plataforma de avaliação acadêmica feita por alunos, para alunos."

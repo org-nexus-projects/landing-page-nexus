@@ -23,7 +23,7 @@ export function BlogNotificationToast({ onDismiss, onAction }: BlogNotificationT
         <div className="flex-shrink-0">
           <div className="w-11 h-11 rounded-full overflow-hidden ring-2 ring-gray-100">
             <img
-              src="/nexus-logo-blue-bg.png"
+              src="/brand/nexus-logo-blue-bg.png"
               alt="Nexus"
               className="w-full h-full object-cover"
             />
@@ -34,7 +34,7 @@ export function BlogNotificationToast({ onDismiss, onAction }: BlogNotificationT
         <div className="flex-1 min-w-0 pt-0.5">
           <div className="flex items-center gap-2 mb-1">
             <span className="font-semibold text-[15px] text-gray-900 tracking-tight">
-              Time Nexus
+              Nexus
             </span>
             <span className="text-[12px] text-gray-400 font-medium">
               2 min atrás

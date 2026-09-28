@@ -96,7 +96,7 @@ export default function NavBar() {
               className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
             >
               <img 
-                src="/nexus-logo-black.png" 
+                src="/brand/nexus-logo-black.png" 
                 alt="Nexus Logo" 
                 className="h-7 w-auto" 
               />
@@ -124,19 +124,8 @@ export default function NavBar() {
             
           </nav>
           
-          {/* Right Side - Clean Interaction Area */}
           <div className="hidden lg:flex items-center gap-6">
-            {/* GitHub Link - Minimal */}
-            <a 
-              href="https://github.com/org-nexus-projects" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2.5 px-4 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-200 text-[14px] font-medium"
-            >
-              <Github className="h-4 w-4 opacity-70" />
-            </a>
 
-            {/* CTA Button - Clean */}
             <Button 
               size="sm" 
               className="rounded-lg px-5 py-2 font-medium text-[14px] shadow-sm hover:shadow transition-all duration-200"

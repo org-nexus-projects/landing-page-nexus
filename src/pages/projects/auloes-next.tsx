@@ -3,7 +3,7 @@ import { ProjectPage } from "#components/project-page";
 
 const AuloesNext = () => (
   <ProjectPage
-    logo="/projects/aulao-logo.png"
+    logo="/projects/auloes-next.png"
     logoAlt="Aulões Next"
     title="Aulões Next"
     tagline="Veteranos ensinando, calouros crescendo. Juntos."

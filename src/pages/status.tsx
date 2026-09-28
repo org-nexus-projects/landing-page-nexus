@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
-import { Link } from "react-router-dom";
-import { ArrowLeft, RefreshCw } from "lucide-react";
+import { RefreshCw } from "lucide-react";
 import { Button } from "#components/ui/button";
+import NavBar from "#components/nav-bar";
 
 type ServiceStatus = "checking" | "operational" | "degraded" | "down";
 
@@ -146,18 +146,7 @@ export default function Status() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Nav */}
-      <nav className="w-full border-b border-gray-100 py-4 px-6">
-        <div className="max-w-3xl mx-auto">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            <ArrowLeft size={16} />
-            Instituto Nexus
-          </Link>
-        </div>
-      </nav>
+      <NavBar />
 
       <main className="max-w-3xl mx-auto px-6 py-16">
         {/* Header */}

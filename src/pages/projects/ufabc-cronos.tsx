@@ -3,9 +3,9 @@ import { ProjectPage } from "#components/project-page";
 
 const UfabcCronos = () => (
   <ProjectPage
-    logo="/projects/cronos-project.png"
-    logoAlt="Cronos"
-    title="Cronos"
+    logo="/projects/ufabc-cronos.png"
+    logoAlt="UFABC Cronos"
+    title="UFABC Cronos"
     tagline="Monte a graduação que vai gerar mais valor para a sua vida."
     description="Um planejador de graduação inteligente que cruza seu perfil, objetivos de carreira e as avaliações da comunidade para ajudar você a construir o percurso acadêmico ideal na UFABC."
     stats={[

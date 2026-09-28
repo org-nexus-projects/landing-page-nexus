@@ -3,7 +3,7 @@ import { ProjectPage } from "#components/project-page";
 
 const UfabcParser = () => (
   <ProjectPage
-    logo="/projects/parser-logo.png"
+    logo="/projects/ufabc-parser.png"
     logoAlt="UFABC Parser"
     title="UFABC Parser"
     tagline="Dados acadêmicos da UFABC, estruturados e acessíveis via API."

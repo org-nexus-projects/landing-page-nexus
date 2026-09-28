@@ -3,29 +3,29 @@ export const projects = [
       id: 1,
       title: "UFABC Next",
       description: "Construímos uma plataforma de avaliação de professores, disciplinas e programas com base na experiência dos alunos",
-      icon: "./projects/next-logo.jpg",
+      icon: "./projects/ufabc-next.png",
       link: "/ufabc-next"
     },
     {
       id: 2,
       title: "UFABC Parser",
       description: "Fornecemos todas as informações relevantes para o desenvolvimento universitário da UFABC em formato de API",
-      icon: "./projects/parser-logo.png",
+      icon: "./projects/ufabc-parser.png",
       link: "/ufabc-parser"
     },
     {
       id: 3,
       title: "UFABC Cronos",
       description: "Planejador de graduação personalizado para ajudar os alunos a montarem a grade que mais vai gerar valor para a sua carreira e vida pessoal",
-      icon: "./projects/cronos-project.png",
+      icon: "./projects/ufabc-cronos.png",
       link: "/ufabc-cronos"
     },
     {
       id: 4,
       title: "Communications",
       description: "Criamos um bot do WhatsApp para facilitar o acesso dos alunos a informações acadêmicas importantes e manter a comunidade acadêmica conectada",
-      icon: "./projects/whatsapp-icon.png",
-      link: "/whatsapp-bot"
+      icon: "./projects/communications.png",
+      link: "/communications"
     },
     {
       id: 5,
@@ -38,7 +38,7 @@ export const projects = [
       id: 6,
       title: "Aulões Next",
       description: "Criamos aulões para conectar veteranos e calouros",
-      icon: "./projects/aulao-logo.png",
+      icon: "./projects/auloes-next.png",
       link: "/auloes-next"
     },
   ];

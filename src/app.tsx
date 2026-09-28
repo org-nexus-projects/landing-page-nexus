@@ -6,15 +6,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/index";
 import NotFound from "./pages/not-found";
 import Team from "./pages/team";
-import UfabcNext from "./pages/ufabc-next";
-import UfabcParser from "./pages/ufabc-parser";
-import TamanduAi from "./pages/tamandu-ai";
-import AuloesNext from "./pages/auloes-next";
-import UfabcCronos from "./pages/ufabc-cronos";
+import UfabcNext from "./pages/projects/ufabc-next";
+import UfabcParser from "./pages/projects/ufabc-parser";
+import TamanduAi from "./pages/projects/tamandu-ai";
+import AuloesNext from "./pages/projects/auloes-next";
+import UfabcCronos from "./pages/projects/ufabc-cronos";
 import Status from "./pages/status";
 import Blog from "./pages/blog";
 import BlogPost from "./pages/blog-post";
-import Communications from "./pages/communications";
+import Communications from "./pages/projects/communications";
 
 const queryClient = new QueryClient();
 

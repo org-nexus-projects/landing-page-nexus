@@ -17,7 +17,6 @@ import { getVisiblePosts } from "#data/blog-posts";
 
 const LandingPage = () => {
   useEffect(() => {
-    // Show custom blog notification toast immediately on page load
     toast.custom(
       (toastId) => (
         <BlogNotificationToast
@@ -38,7 +37,7 @@ const LandingPage = () => {
     );
   }, []);
 
-  const blogPosts = getVisiblePosts()
+  const blogPosts = getVisiblePosts();
 
   
   return (
@@ -64,7 +63,7 @@ const LandingPage = () => {
               {/* Image */}
               <div className="flex justify-center hover:scale-105 transition-all duration-300">
                 <img
-                  src="/members/time.jpeg"
+                  src="/group-pics/aws-summit-1.jpeg"
                   alt="Estudantes UFABC Next"
                   className="rounded-2xl shadow-2xl w-full max-h-[400px] object-cover"
                 />
@@ -114,7 +113,7 @@ const LandingPage = () => {
               {/* Image */}
               <div className="flex justify-center hover:scale-105 transition-all duration-300">
                 <img
-                  src="/members/time.jpeg"
+                  src="/group-pics/aws-summit-1.jpeg"
                   alt="Estudantes UFABC Next"
                   className="rounded-2xl shadow-2xl w-full max-h-[520px] object-cover"
                 />
@@ -249,7 +248,7 @@ const LandingPage = () => {
           style={{ 
             paddingTop: '3rem', 
             paddingBottom: '36rem',
-            backgroundImage: 'url(/team-image.jpeg)',
+            backgroundImage: 'url(/group-pics/group-next.jpeg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
@@ -297,7 +296,7 @@ const LandingPage = () => {
                   description="Um guia completo sobre como diagnosticar e resolver problemas de servidor, desde volumes EBS até gerenciamento de filesystem."
                   author={{
                     name: "Gabriel Monteiro",
-                    avatar: "/members/gabriel.jpeg",
+                    avatar: "/members/active/gabriel.jpeg",
                     date: "6 de Dez, 2025"
                   }}
                   href="/blog/my-server-is-down-what-do-i-do"
