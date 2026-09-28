@@ -103,7 +103,7 @@ export default function Team() {
       role: "Engenheiro de Software",
       image: "/members/carlos-profile-pic.jpeg",
       linkedin: "https://www.linkedin.com/in/alencarlima/",
-      bio: "Engenheiro Fullstack do projeto UFABC next, focado em construir soluções e experiências desde a interface ao servidor. Graduando na UFABC como cientista da computação, também faz parte do time de análise de dados, automação e modelagem do Banco Itaú",
+      bio: "Engenheiro Fullstack do projeto UFABC Next, focado em construir soluções e experiências desde a interface ao servidor. Graduando na UFABC como cientista da computação, também faz parte do time de análise de dados, automação e modelagem do Banco Itaú",
     },
     {
       id: 10,
@@ -129,7 +129,7 @@ export default function Team() {
       role: "Consultor Técnico Frontend",
       image: "/specs/renan-zago.png",
       linkedin: "https://www.linkedin.com/in/renanzagolorijola/",
-      bio: "Consultor técnico com experiência em performance, escalabilidade e melhores práticas do desenvolvimento frontend. Durante a graduação, aplicou seu projeto de conclusão de curso com uma abordagem de refatoração orientada a Microfrontends no projeto UFABC next. Sua trajetória conta com passagens pelo Banco Itaú e pela gigante nacional Boticário",
+      bio: "Consultor técnico com experiência em performance, escalabilidade e melhores práticas do desenvolvimento frontend. Durante a graduação, aplicou seu projeto de conclusão de curso com uma abordagem de refatoração orientada a Microfrontends no projeto UFABC Next. Sua trajetória conta com passagens pelo Banco Itaú e pela gigante nacional Boticário",
     },
     {
       id: 2,
@@ -152,7 +152,7 @@ export default function Team() {
           image: "/former-members/felipe-silva.png",
           linkedin: "https://www.linkedin.com/in/feosilva/",
           side: "left",
-          bio: "Founder team do projeto UFABC next. Empreendedor e cofundador da BeConfident. Como CPO, ajudou a transformar a visão em produto, liderando desenvolvimento de soluções educacionais que impactam milhares de alunos globalmente. Apaixonado por tecnologia, educação e experiências que democratizam oportunidades de aprendizado para todos."
+          bio: "Founder team do projeto UFABC Next. Empreendedor e cofundador da BeConfident. Como CPO, ajudou a transformar a visão em produto, liderando desenvolvimento de soluções educacionais que impactam milhares de alunos globalmente. Apaixonado por tecnologia, educação e experiências que democratizam oportunidades de aprendizado para todos."
         },
         {
           id: "2019-2",
@@ -161,7 +161,7 @@ export default function Team() {
           image: "/former-members/felipe-tiozo.png",
           linkedin: "https://www.linkedin.com/in/felipetiozo/",
           side: "right",
-          bio: "Founder team do projeto UFABC next. Empreendedor e engenheiro de software, Co-Founder e CTO da BeConfident, plataforma de aprendizado de inglês baseada em IA com atuação global. Experiência em liderança técnica, produtos digitais e edtech, com passagem por startups e empresas de tecnologia.Apaixonado por construir soluções escaláveis, centradas no usuário e com impacto real em educação e tecnologia."
+          bio: "Founder team do projeto UFABC Next. Empreendedor e engenheiro de software, Co-Founder e CTO da BeConfident, plataforma de aprendizado de inglês baseada em IA com atuação global. Experiência em liderança técnica, produtos digitais e edtech, com passagem por startups e empresas de tecnologia.Apaixonado por construir soluções escaláveis, centradas no usuário e com impacto real em educação e tecnologia."
         },
         {
           id: "2019-3",
@@ -170,7 +170,7 @@ export default function Team() {
           image: "/former-members/felipe-augusto.png",
           linkedin: "https://www.linkedin.com/in/felipeaugustodev/",
           side: "left",
-          bio: "Founder team do projeto UFABC next. Software engineer na QA Wolf construindos a nova era dos testes de software. Apaixonado por criar, projetar e implementar novas ideias, aprendiz ao longo da vida, leitor assíduo e entusiasta de TypeScript."
+          bio: "Founder team do projeto UFABC Next. Software engineer na QA Wolf construindos a nova era dos testes de software. Apaixonado por criar, projetar e implementar novas ideias, aprendiz ao longo da vida, leitor assíduo e entusiasta de TypeScript."
         },
       ]
     },
@@ -185,7 +185,7 @@ export default function Team() {
           image: "/former-members/vinicius-santana.png",
           linkedin: "https://www.linkedin.com/in/vinicius-santana-santos/",
           side: "right",
-          bio: "Atuou como engenheiro de software no projeto UFABC next, com foco em soluções backend. Atualmente, capacita decisões mais inteligentes com dados sobre profissionais, empresas e tendências de mercado na empresa internacionalMixRank"
+          bio: "Atuou como engenheiro de software no projeto UFABC Next, com foco em soluções backend. Atualmente, capacita decisões mais inteligentes com dados sobre profissionais, empresas e tendências de mercado na empresa internacionalMixRank"
         },
       ]
     },

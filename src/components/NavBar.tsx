@@ -82,15 +82,15 @@ export default function NavBar() {
   ];
 
   const projectsDropdown = [
+    { label: "UFABC Next", href: "/projetos/ufabc-next" },
+    { label: "UFABC Parser", href: "/projetos/ufabc-parser" },
     { label: "Communications", href: "/projetos/communications" },
     { label: "TamanduAI", href: "/projetos/tamanduai" },
-    { label: "UFABC parser", href: "/projetos/ufabc-parser" },
-    { label: "UFABC next", href: "/projetos/ufabc-next" },
     { label: "Aulões Next", href: "/projetos/auloes-next" },
   ];
 
   const docsDropdown = [  
-    { label: "UFABC parser", href: "https://ufabc-parser.com/docs" },
+    { label: "UFABC Parser", href: "https://ufabc-parser.com/docs" },
   
   ];
 
@@ -119,7 +119,7 @@ export default function NavBar() {
             
             <span className="h-4 w-px bg-border/60" aria-hidden="true" />
 
-            <NavDropdown label="Documentação" items={docsDropdown} />
+            <NavBarLink to="/blog">Blog</NavBarLink>
             
             <span className="h-4 w-px bg-border/60" aria-hidden="true" />
             
@@ -128,12 +128,9 @@ export default function NavBar() {
 
 
             <span className="h-4 w-px bg-border/60" aria-hidden="true" />
-
-            <NavBarLink to="/blog">Blog</NavBarLink>
             
-            {/*  <span className="h-4 w-px bg-border/60" aria-hidden="true" /> */}
+            <NavDropdown label="Documentação" items={docsDropdown} />
             
-           {/* Center Navigation - Generous Spacing  <NavDropdown label="Recursos" items={resourcesDropdown} /> */}
           </nav>
           
           {/* Right Side - Clean Interaction Area */}
