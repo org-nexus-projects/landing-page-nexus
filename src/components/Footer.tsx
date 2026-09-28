@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -13,37 +14,45 @@ export default function Footer() {
                   className="w-20 h-full"
                 />
             </div>
-            <p className="text-gray-400 mb-4">
-              Uma iniciativa acadêmica para melhorar a experiência universitária na UFABC.
+            <p className="text-gray-400">
+              Uma rede para quem quer transformar
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
+            <h3 className="text-lg font-semibold mb-4">Acesso Rápido</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/#sobre" className="text-gray-400 hover:text-white transition-colors">
-                  Sobre
-                </Link>
-              </li>
-              <li>
-                <Link to="/#iniciativas" className="text-gray-400 hover:text-white transition-colors">
-                  Iniciativas
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="text-gray-400 hover:text-white transition-colors">
-                  Time
-                </Link>
-              </li>
               <li>
                 <a
                   href="https://ufabcnext.com"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Plataforma
+                  UFABC Next
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ufabc-parser.com/"
+                  className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  UFABC Parser
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.ufabccronos.com.br/"
+                  className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  UFABC Cronos
+                  <ExternalLink className="h-3.5 w-3.5" />
                 </a>
               </li>
             </ul>

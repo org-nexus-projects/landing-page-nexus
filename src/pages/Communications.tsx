@@ -20,11 +20,11 @@ const Communications = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <img 
-            src="/members/wpp-bot-project.webp" 
+            src="/projects/communications.png" 
             alt="Communications Logo" 
             className="w-64 h-64 object-contain mx-auto mb-8"
           />
-          <h1 className="text-4xl font-bold mb-6 text-primary">UFABC Next WhatsApp Bot</h1>
+          <h1 className="text-4xl font-bold mb-6 text-primary">Communications</h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Bot no WhatsApp para facilitar o acesso dos estudantes a informações acadêmicas importantes
           </p>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, MessageCircle, Sparkles, Brain, Zap } from "lucide-react";
@@ -20,12 +19,12 @@ const TamanduAi = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <img 
-            src="/members/wpp-bot-project.webp" 
-            alt="Comunnications AI Logo" 
+            src="/projects/tamanduai.jpeg" 
+            alt="TamanduAI Logo" 
             className="w-64 h-64 object-contain mx-auto mb-8"
           />
           <div className="flex items-center justify-center gap-2 mb-6">
-            <h1 className="text-4xl font-bold text-primary">UFABC Next WhatsApp Bot AI</h1>
+            <h1 className="text-4xl font-bold text-primary">TamanduAI</h1>
             <Sparkles className="text-primary" size={32} />
           </div>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">

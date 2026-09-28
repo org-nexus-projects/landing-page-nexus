@@ -1,7 +1,7 @@
 import { Calendar, Map, Target, TrendingUp, Layers, Lightbulb } from "lucide-react";
 import { ProjectPage } from "@/components/ProjectPage";
 
-const Cronos = () => (
+const UfabcCronos = () => (
   <ProjectPage
     logo="/projects/cronos-project.png"
     logoAlt="Cronos"
@@ -55,4 +55,4 @@ const Cronos = () => (
   />
 );
 
-export default Cronos;
+export default UfabcCronos;

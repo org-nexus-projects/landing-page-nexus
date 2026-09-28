@@ -16,6 +16,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { projects } from "@/lib/constants";
+
+const dropDownProjects = projects.map((project) => ({
+  label: project.title,
+  href: project.link,
+}));
 
 interface NavLinkProps {
   to: string;
@@ -70,23 +76,8 @@ function MobileNavLink({ to, onClick, children }: { to: string; onClick: () => v
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const productsDropdown = [
-    { label: "Projetos", href: "/#projetos" },
-    { label: "UFABC Next", href: "/projetos/ufabc-next" },
-    { label: "UFABC Parser", href: "/projetos/ufabc-parser" },
-  ];
-
   const resourcesDropdown = [
     { label: "Blog", href: "/blog" },
-    { label: "Comunidade", href: "/#comunidade" },
-  ];
-
-  const projectsDropdown = [
-    { label: "UFABC Next", href: "/projetos/ufabc-next" },
-    { label: "UFABC Parser", href: "/projetos/ufabc-parser" },
-    { label: "Communications", href: "/projetos/communications" },
-    { label: "TamanduAI", href: "/projetos/tamanduai" },
-    { label: "Aulões Next", href: "/projetos/auloes-next" },
   ];
 
   const docsDropdown = [  
@@ -115,7 +106,7 @@ export default function NavBar() {
           {/* Center Navigation - Generous Spacing */}
           <nav className="hidden lg:flex items-center gap-10">
 
-           <NavDropdown label="Projetos" items={projectsDropdown} />
+           <NavDropdown label="Projetos" items={dropDownProjects} />
             
             <span className="h-4 w-px bg-border/60" aria-hidden="true" />
 
@@ -164,24 +155,21 @@ export default function NavBar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[320px] sm:w-[400px]">
-                <SheetHeader className="border-b pb-6">
                   <SheetTitle className="flex items-center gap-3">
-                    <img src="/nexus-logo-gradient.svg" alt="Nexus Logo" className="h-7 w-7" />
-                    <span className="text-[19px] font-bold">Nexus</span>
+                    <img src="/nexus-logo-black.png" alt="Nexus" className="h-full w-20" />
                   </SheetTitle>
-                </SheetHeader>
+
+                  
                   <nav className="flex flex-col gap-6 mt-8">
-                    <div className="space-y-2">
-                      <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                        Produtos
-                      </p>
-                      {productsDropdown.map((item) => (
+                    
+
+                    <div className="border-t pt-6 space-y-2">
+                      {resourcesDropdown.map((item) => (
                         <MobileNavLink key={item.href} to={item.href} onClick={() => setIsOpen(false)}>
                           {item.label}
                         </MobileNavLink>
                       ))}
                     </div>
-
                     <div className="border-t pt-6 space-y-2">
                        <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-3">
                         Documentação
@@ -197,18 +185,7 @@ export default function NavBar() {
                       <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-3">
                         Projetos
                       </p>
-                      {projectsDropdown.map((item) => (
-                        <MobileNavLink key={item.href} to={item.href} onClick={() => setIsOpen(false)}>
-                          {item.label}
-                        </MobileNavLink>
-                      ))}
-                    </div>
-
-                    <div className="border-t pt-6 space-y-2">
-                      <MobileNavLink to="/blog" onClick={() => setIsOpen(false)}>
-                        Blog
-                      </MobileNavLink>
-                      {resourcesDropdown.map((item) => (
+                      {dropDownProjects.map((item) => (
                         <MobileNavLink key={item.href} to={item.href} onClick={() => setIsOpen(false)}>
                           {item.label}
                         </MobileNavLink>
@@ -218,7 +195,7 @@ export default function NavBar() {
                     <div className="border-t pt-6">
                       <Button className="w-full rounded-lg font-medium shadow-sm" asChild>
                         <a href="/#comunidade" onClick={() => setIsOpen(false)}>
-                          Cadastrar
+                          Junte-se a nós
                         </a>
                       </Button>
                     </div>

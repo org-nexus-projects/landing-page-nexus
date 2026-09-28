@@ -32,10 +32,10 @@ const SERVICES: Service[] = [
     checkUrl: "https://api.v2.ufabcnext.com/health",
   },
   {
-    name: "Parser",
+    name: "UFABC Parser",
     description: "Dados acadêmicos estruturados da UFABC",
     url: "https://ufabc-parser.com",
-    checkUrl: "https://ufabc-parser.com/v2",
+    checkUrl: "https://ufabc-parser.com/health",
   },
 ];
 
@@ -164,7 +164,7 @@ export default function Status() {
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Status dos Serviços</h1>
           <p className="text-gray-500">
-            Monitoramento em tempo real dos projetos do Instituto Nexus.
+            Monitoramento em tempo real dos projetos do Nexus.
           </p>
         </div>
 

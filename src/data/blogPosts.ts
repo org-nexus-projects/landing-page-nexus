@@ -24,9 +24,10 @@ export interface BlogPost {
     authors?: Author[]; // Multiple authors
     date: string;
     readTime: string;
-    category: string;
+    categories: string[];
     slug: string;
     tags?: string[];
+    visible: boolean;
 }
 
 export const blogPostsDatabase: Record<string, BlogPost> = {
@@ -82,7 +83,7 @@ export const blogPostsDatabase: Record<string, BlogPost> = {
         ],
         date: "21 de Dezembro, 2025",
         readTime: "8 min de leitura",
-        category: "Tecnologia",
+        categories: ["technology", "next", ],
         slug: "my-server-is-down-what-do-i-do",
         tags: ["tecnologia", "servidor", "troubleshooting", "devops", "UFABC Next"],
         content: `
@@ -227,10 +228,9 @@ O volume utilizado era do tipo <strong>NVMe (Non-Volatile Memory Express)</stron
     Se você gostaria de <strong>aprender tecnologia a partir de vivências práticas</strong> e <strong>impactar a comunidade acadêmica da Universidade Federal do ABC</strong> no processo. Esse lugar é para você, venha fazer parte do time, <strong>inscrições em breve</strong>!
   </p>
 </div>
-
- `,
+`,
+        visible: true,
     },
-
     "extension-ufabc-next": {
         id: "1",
         title: "Quero atualizar meus dados no UFABC Next, como faço?",
@@ -255,16 +255,21 @@ O volume utilizado era do tipo <strong>NVMe (Non-Volatile Memory Express)</stron
         ],
         date: "1 de Dezembro, 2025",
         readTime: "6 min de leitura",
-        category: "technology",
+        categories: ["technology"],
         slug: "extension-ufabc-next",
         tags: ["ufabc-next", "Tecnologia", "Comunidade"],
-        content: `<h2>Um conteúdo incrivel vindo por aí</h2>`
+        content: `<h2>Um conteúdo incrivel vindo por aí</h2>`,
+        visible: false,
     }
 };
 
 // Helper function to get all posts for listing
 export function getAllPosts(): BlogPost[] {
     return Object.values(blogPostsDatabase);
+}
+
+export function getVisiblePosts(): BlogPost[] {
+    return Object.values(blogPostsDatabase).filter(post => post.visible);
 }
 
 // Helper function to get a single post by slug
@@ -277,5 +282,5 @@ export function getPostsByCategory(category: string): BlogPost[] {
     if (category === "all") {
         return getAllPosts();
     }
-    return getAllPosts().filter(post => post.category === category);
+    return getAllPosts().filter(post => post.categories.includes(category));
 }

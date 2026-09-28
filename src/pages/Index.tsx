@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { toast } from "sonner";
 import { BlogNotificationToast } from "@/components/BlogNotificationToast";
+import { projects } from "@/lib/constants";
+import { getVisiblePosts } from "@/data/blogPosts";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -36,50 +38,9 @@ const LandingPage = () => {
     );
   }, []);
 
-  const projects = [
-    {
-      id: 1,
-      title: "UFABC Next",
-      description: "Construímos uma plataforma de avaliação de professores, disciplinas e programas com base na experiência dos alunos",
-      icon: "./projects/next-logo.jpg",
-      link: "/projetos/ufabc-next"
-    },
-    {
-      id: 2,
-      title: "Parser",
-      description: "Fornecemos todas as informações relevantes para o desenvolvimento universitário da UFABC em formato de API",
-      icon: "./projects/parser-logo.png",
-      link: "/projetos/ufabc-parser"
-    },
-    {
-      id: 3,
-      title: "Communications",
-      description: "Criamos um bot do WhatsApp para facilitar o acesso dos alunos a informações acadêmicas importantes e manter a comunidade acadêmica conectada",
-      icon: "./projects/whatsapp-icon.png",
-      link: "/projetos/whatsapp-bot"
-    },
-    {
-      id: 4,
-      title: "TamanduAI",
-      description: "Assistente inteligente com IA para responder dúvidas acadêmicas de forma personalizada",
-      icon: "./projects/tamanduai.jpeg",
-      link: "/projetos/tamanduai"
-    },
-    {
-      id: 5,
-      title: "UFABC Cronos",
-      description: "Planejador de graduação personalizado para ajudar os alunos a montarem a grade que mais vai gerar valor para a sua carreira e vida pessoal",
-      icon: "./projects/cronos-project.png",
-      link: "/projetos/cronos"
-    },
-    {
-      id: 6,
-      title: "Aulões Next",
-      description: "Criamos aulões para conectar veteranos e calouros",
-      icon: "./projects/aulao-logo.png",
-      link: "/projetos/auloes-next"
-    },
-  ];
+  const blogPosts = getVisiblePosts()
+
+  
   return (
     <div className="min-h-screen bg-background">
       <NavBar />
@@ -147,11 +108,6 @@ const LandingPage = () => {
                     buttonText={"Seja um Voluntário"}
                     buttonClassName="bg-white text-black hover:bg-white/70 font-semibold"
                   />
-                  <Button
-                    size="lg"
-                    className="text-white hover:bg-white/10 bg-transparent"
-                  >
-                  </Button>
                 </div>
               </div>
 
@@ -333,10 +289,8 @@ const LandingPage = () => {
               </p>
             </div>
 
-            {/* Blog Cards Grid */}
             <div className="flex justify-center">
               <div className="grid md:grid-cols-2 gap-x-8 gap-y-16 max-w-[900px]">
-                {/* Blog Card 1 */}
                 <BlogCard
                   image="/blog/blog-1/wallpaper/resizing_machines.png"
                   title="Mayday, o next caiu! E agora?"
@@ -347,19 +301,6 @@ const LandingPage = () => {
                     date: "6 de Dez, 2025"
                   }}
                   href="/blog/my-server-is-down-what-do-i-do"
-                />
-
-                {/* Blog Card 2 */}
-                <BlogCard
-                  image="/blog/blog-2/wallpaper/image.png"
-                  title="Atualização de Dados no UFABC Next"
-                  description="Entenda o funcionamento da extensão de atualização automática de dados e como ela facilita sua experiência."
-                  author={{
-                    name: "Nicolas Greco",
-                    avatar: "/members/nicolas.jpeg",
-                    date: "1 de Dez, 2025"
-                  }}
-                  href="/404"
                 />
               </div>
             </div>
@@ -383,12 +324,6 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-
-
-       
-
-
-
         
         {/* Comunidade */}
         <section

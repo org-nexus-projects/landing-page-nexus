@@ -4,32 +4,18 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { getAllPosts, type BlogPost } from "@/data/blogPosts";
-
-const categories = [
-  { id: "all", label: "Todos" },
-  { id: "technology", label: "Tecnologia" },
-  { id: "community", label: "Comunidade" },
-  { id: "tutorials", label: "Tutoriais" },
-  { id: "updates", label: "Atualizações" },
-  { id: "events", label: "Eventos" }, 
-  { id: "next", label: "UFABC Next" }
-];  
+import { getVisiblePosts, type BlogPost } from "@/data/blogPosts";
+import { blog_categories } from "@/lib/constants";
 
 // Get all blog posts from centralized data
-const blogPosts: BlogPost[] = getAllPosts();
+const blogPosts: BlogPost[] = getVisiblePosts();
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const filteredPosts = selectedCategory === "all" 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
-
-  const getCategoryLabel = (categoryId: string) => {
-    const category = categories.find(c => c.id === categoryId);
-    return category ? category.label : categoryId;
-  };
+    ? blogPosts
+    : blogPosts.filter(post => post.categories.includes(selectedCategory));
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,7 +34,7 @@ export default function Blog() {
 
         {/* Category Filter */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
-          {categories.map((category) => (
+          {blog_categories.map((category) => (
             <Button
               key={category.id}
               variant={selectedCategory === category.id ? "default" : "outline"}
@@ -104,22 +90,22 @@ function BlogCard({ post }: { post: BlogPost }) {
         />
       </div>
 
-      {/* Content */}
       <div className="p-6 space-y-4">
         {/* Category Badge */}
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-muted text-muted-foreground">
-          {(() => {
-            const categories = [
-              { id: "technology", label: "Tecnologia" },
-              { id: "community", label: "Comunidade" },
-              { id: "tutorials", label: "Tutoriais" },
-              { id: "updates", label: "Atualizações" },
-              { id: "events", label: "Eventos" }
-            ];
-            const category = categories.find(c => c.id === post.category);
-            return category ? category.label : post.category;
-          })()}
-        </span>
+        <div className="flex flex-wrap gap-2">
+          {post.categories.map((categoryId) => {
+            const category = blog_categories.find((item) => item.id === categoryId);
+
+            return (
+              <span
+                key={categoryId}
+                className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-muted text-muted-foreground"
+              >
+                {category?.label ?? categoryId}
+              </span>
+            );
+          })}
+        </div>
 
         {/* Title */}
         <h3 className="text-xl font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2">
@@ -131,10 +117,10 @@ function BlogCard({ post }: { post: BlogPost }) {
           {post.excerpt}
         </p>
 
-        {/* Author Section — show all authors if present */}
+        {/* Author Section */}
         <div className="flex items-center gap-3 pt-2">
           <div className="flex -space-x-2 items-center">
-            {(post.authors && post.authors.length > 0 ? post.authors : [post.author]).slice(0, 3).map((a, i) => (
+            {(post.authors).slice(0, 3).map((a, i) => (
               <div key={i} className="rounded-full ring-2 ring-card bg-card">
                 <Avatar className="h-8 w-8 border-2">
                   <AvatarImage src={a.avatar} alt={a.name} />
@@ -148,7 +134,7 @@ function BlogCard({ post }: { post: BlogPost }) {
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium truncate">
-              {(post.authors && post.authors.length > 0 ? post.authors.map(a => a.name).join(', ') : post.author.name)}
+              {post.authors[0].name + ` e +${post.authors.length - 1}` }
             </p>
             <p className="text-xs text-muted-foreground">{post.date}</p>
           </div>
