@@ -9,7 +9,6 @@ const UfabcCronos = () => (
     tagline="Monte a graduação que vai gerar mais valor para a sua vida."
     description="Um planejador de graduação inteligente que cruza seu perfil, objetivos de carreira e as avaliações da comunidade para ajudar você a construir o percurso acadêmico ideal na UFABC."
     stats={[
-      { value: "Em breve", label: "Lançamento" },
       { value: "100+", label: "Combinações possíveis" },
       { value: "0", label: "Semestres perdidos" },
     ]}
@@ -51,7 +50,8 @@ const UfabcCronos = () => (
           "O sistema identifica gargalos no seu percurso e sugere otimizações para você chegar mais rápido aos seus objetivos.",
       },
     ]}
-    ctaText="Entrar na Lista de Espera"
+    ctaText="Acessar"
+    ctaHref="https://ufabccronos.com.br"
   />
 );
 

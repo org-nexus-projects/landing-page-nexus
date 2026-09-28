@@ -39,7 +39,7 @@ export const blogPostsDatabase: Record<string, BlogPost> = {
         authors: [
             {
                 name: "Gabriel Monteiro",
-                avatar: "/members/gabriel.jpeg",
+                avatar: "/members/active/gabriel.jpeg",
                 role: "Fundador & CEO",
                 bio: "Gabriel é o Fundador e CEO do Nexus. Com paixão por construir ferramentas que capacitam estudantes, Gabriel lidera o time na criação de soluções inovadoras para a comunidade acadêmica.",
                 social: {
@@ -54,28 +54,26 @@ export const blogPostsDatabase: Record<string, BlogPost> = {
             
             {
                 name: "Joabe Silva",
-                avatar: "/members/joabe.jpeg",
+                avatar: "/members/active/joabe.jpeg",
                 role: "Cofundador & CTO",
                 bio: "Joabe é o Cofundador e CTO do Nexus, construindo soluções robustas e escaláveis no servidor. Adora resolver problemas complexos.",
                 social: {
                     linkedin: "https://www.linkedin.com/in/joabesv/",
                     github: "https://github.com/joabesilva"
                 },
-                // optional fields for metadata
                 campus: "UFABC Santo André",
                 curso: "Ciência da Computação",
                 handle: "@joabesilva"
             },
             {
                 name: "Nicolas Greco",
-                avatar: "/members/nicolas.jpeg",
-                role: "Diretor de Tecnologia",
+                avatar: "/members/active/nicolas.jpeg",
+                role: "Diretor de Comunidade e Tecnologia",
                 bio: "Nicolas é o Diretor de Tecnologia do Nexus, liderando as iniciativas técnicas e garantindo que nossa infraestrutura funcione de forma suave e confiável. É apaixonado por automação e boas práticas.",
                 social: {
                     linkedin: "https://www.linkedin.com/in/nicolas-greco-160a5b258/",
-                    github: "https://github.com/nicolasgrecos"
+                    github: "https://github.com/grecoww"
                 },
-                // optional fields for metadata
                 campus: "UFABC Santo André",
                 curso: "Ciência da Computação",
                 handle: "@nicolasgreco"
@@ -240,12 +238,12 @@ O volume utilizado era do tipo <strong>NVMe (Non-Volatile Memory Express)</stron
 
             {
                 name: "Nicolas Greco",
-                avatar: "/members/nicolas.jpeg",
-                role: "Diretor de Tecnologia",
+                avatar: "/members/active/nicolas.jpeg",
+                role: "Diretor de Comunidade e Tecnologia",
                 bio: "Nicolas é o Diretor de Tecnologia do Nexus, liderando as iniciativas técnicas e garantindo que nossa infraestrutura funcione de forma suave e confiável. É apaixonado por automação e boas práticas.",
                 social: {
-                    linkedin: "https://www.linkedin.com/in/nicolas-grecos/",
-                    github: "https://github.com/nicolasgrecos"
+                    linkedin: "https://www.linkedin.com/in/nicolas-greco-160a5b258/",
+                    github: "https://github.com/grecoww"
                 },
                 // optional fields for metadata
                 campus: "UFABC Santo André",

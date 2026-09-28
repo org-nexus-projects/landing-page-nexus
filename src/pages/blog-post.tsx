@@ -5,6 +5,7 @@ import { Button } from "#components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "#components/ui/avatar";
 import { ArrowLeft, Calendar, School, Share2, Twitter, Linkedin, Github, MapPin, AtSign, Check } from "lucide-react";
 import { getPostBySlug, type Author } from "#data/blog-posts";
+import { blog_categories } from "#lib/constants";
 import { useState } from "react";
 import {
   Carousel,
@@ -14,7 +15,6 @@ import {
   CarouselPrevious,
 } from "#components/ui/carousel";
 
-// Author Card Component
 function AuthorCard({ author }: { author: Author }) {
   return (
     <div className="p-8 rounded-2xl bg-muted/50 border h-full">
@@ -74,6 +74,7 @@ export default function BlogPost() {
   const [copied, setCopied] = useState(false);
   
   const post = slug ? getPostBySlug(slug) : null;
+  const authors = post?.authors ?? [];
 
   const handleShareClick = async () => {
     const url = window.location.href;
@@ -112,17 +113,24 @@ export default function BlogPost() {
       <NavBar />
 
       <article className="container mx-auto px-6 py-12 max-w-4xl">
-        {/* Back Button */}
         <Link to="/blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-blue-600 transition-colors mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Voltar ao Blog
         </Link>
 
-        {/* Category Badge */}
-        <div className="mb-6">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-muted text-muted-foreground uppercase tracking-wide">
-            {post.category}
-          </span>
+        <div className="flex flex-wrap gap-2 mb-6">
+          {post.categories.map((categoryId) => {
+            const category = blog_categories.find((item) => item.id === categoryId);
+
+            return (
+              <span
+                key={categoryId}
+                className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-muted text-muted-foreground uppercase tracking-wide"
+              >
+                {category?.label ?? categoryId}
+              </span>
+            );
+          })}
         </div>
 
         {/* Title */}
@@ -146,9 +154,7 @@ export default function BlogPost() {
         {/* Author Section */}
         <div className="flex items-center justify-between mb-12 pb-8 border-b">
 
-    {/* Authors avatars row with hover cards */}
-        <AuthorsHoverRow authors={post.authors && post.authors.length > 0 ? post.authors : [post.author]} />
-
+        <AuthorsHoverRow authors={authors} />
          
           <Button 
             variant="outline" 
@@ -226,7 +232,7 @@ export default function BlogPost() {
             {post.authors && post.authors.length > 1 ? "Sobre os Autores" : "Sobre o Autor"}
           </h3>
           
-          {post.authors && post.authors.length > 1 ? (
+          {authors.length > 1 ? (
             <Carousel
               opts={{
                 align: "start",
@@ -245,7 +251,7 @@ export default function BlogPost() {
               <CarouselNext className="right-2" />
             </Carousel>
           ) : (
-            <AuthorCard author={post.author} />
+            authors[0] && <AuthorCard author={authors[0]} />
           )}
         </div>
 

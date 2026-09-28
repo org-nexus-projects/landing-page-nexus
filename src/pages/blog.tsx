@@ -75,7 +75,7 @@ export default function Blog() {
   );
 }
 
-function BlogCard({ post }: { post: BlogPost }) {
+export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link 
       to={`/blog/${post.slug}`}

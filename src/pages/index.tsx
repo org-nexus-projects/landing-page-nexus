@@ -14,6 +14,7 @@ import { toast } from "sonner";
 import { BlogNotificationToast } from "#components/blog-notification-toast";
 import { projects } from "#lib/constants";
 import { getVisiblePosts } from "#data/blog-posts";
+import { BlogCard } from "./blog";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -37,7 +38,7 @@ const LandingPage = () => {
     );
   }, []);
 
-  const blogPosts = getVisiblePosts();
+  const blogPosts = getVisiblePosts().slice(0, 3);
 
   
   return (
@@ -288,20 +289,13 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="flex justify-center">
-              <div className="grid md:grid-cols-2 gap-x-8 gap-y-16 max-w-[900px]">
-                <BlogCard
-                  image="/blog/blog-1/wallpaper/resizing-machines.png"
-                  title="Mayday, o next caiu! E agora?"
-                  description="Um guia completo sobre como diagnosticar e resolver problemas de servidor, desde volumes EBS até gerenciamento de filesystem."
-                  author={{
-                    name: "Gabriel Monteiro",
-                    avatar: "/members/active/gabriel.jpeg",
-                    date: "6 de Dez, 2025"
-                  }}
-                  href="/blog/my-server-is-down-what-do-i-do"
-                />
-              </div>
+            <div className="flex justify-center gap-10">
+              {blogPosts.map((blogPost)=> {
+                return(
+                <BlogCard post={blogPost} />
+              )
+              })}
+              
             </div>
 
             {/* View All Link */}
@@ -377,75 +371,6 @@ function ProjectItem({ project }: { project: any }) {
           {project.description}
         </p>
       </div>
-    </a>
-  );
-}
-
-interface BlogCardProps {
-  image: string;
-  title: string;
-  description: string;
-  author: {
-    name: string;
-    avatar: string;
-    date: string;
-  };
-  href: string;
-}
-
-function BlogCard({ image, title, description, author, href }: BlogCardProps) {
-  return (
-    <a 
-      href={href}
-      className="group block"
-    >
-      <article className="flex flex-col h-full">
-        {/* Feature Image */}
-        <div className="relative aspect-[16/10] mb-6 overflow-hidden rounded-2xl bg-muted">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 flex flex-col gap-4">
-          {/* Title */}
-          <h3 className="text-[22px] font-bold leading-tight tracking-tight text-foreground group-hover:text-foreground/80 transition-colors duration-200 line-clamp-2">
-            {title}
-          </h3>
-
-          {/* Description */}
-          <p className="text-[15px] leading-relaxed text-foreground/60 font-normal line-clamp-3">
-            {description}
-          </p>
-
-          {/* Author Area */}
-          <div className="mt-auto pt-4 flex items-center gap-3 border-t border-border/40">
-            {/* Avatar */}
-            <div className="relative">
-              <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-background">
-                <img
-                  src={author.avatar}
-                  alt={author.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Author Info */}
-            <div className="flex-1 min-w-0">
-              <p className="text-[14px] font-medium text-foreground truncate">
-                {author.name}
-              </p>
-              <p className="text-[13px] text-foreground/50 font-normal">
-                {author.date}
-              </p>
-            </div>
-          </div>
-        </div>
-      </article>
     </a>
   );
 }

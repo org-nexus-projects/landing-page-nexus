@@ -72,12 +72,8 @@ const UfabcParser = () => (
           "Reescrita para FastAPI com banco PostgreSQL e Docker. Documentação completa e cobertura de testes adicionadas.",
       },
     ]}
-    ctaText="Ver no GitHub"
-    ctaHref="https://github.com/org-nexus-projects/ufabc-next-backend"
-    secondaryCta={{
-      text: "Documentação da API",
-      href: "https://github.com/org-nexus-projects/ufabc-next-backend",
-    }}
+    ctaText="Ver documentação"
+    ctaHref="https://ufabc-parser.com/docs"
   />
 );
 
