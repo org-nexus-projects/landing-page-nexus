@@ -78,6 +78,7 @@ export default function NavBar() {
 
   const resourcesDropdown = [
     { label: "Blog", href: "/blog" },
+    { label: "Time", href: "/team" },
   ];
 
   const docsDropdown = [  
@@ -96,7 +97,7 @@ export default function NavBar() {
               className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
             >
               <img 
-                src="/brand/nexus-logo-black.png" 
+                src="/brand/nexus-logo-blue.png" 
                 alt="Nexus Logo" 
                 className="h-7 w-auto" 
               />
@@ -145,7 +146,7 @@ export default function NavBar() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[320px] sm:w-[400px]">
                   <SheetTitle className="flex items-center gap-3">
-                    <img src="/nexus-logo-black.png" alt="Nexus" className="h-full w-20" />
+                    <img src="/brand/nexus-logo-blue.png" alt="Nexus" className="h-full w-20" />
                   </SheetTitle>
 
                   

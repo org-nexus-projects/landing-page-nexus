@@ -56,7 +56,7 @@ export function BlogNotificationToast({ onDismiss, onAction }: BlogNotificationT
         </button>
         <button
           onClick={onAction}
-          className="flex-1 px-4 py-2 text-[13.5px] font-semibold text-white bg-gradient-to-r from-[#0a2e4f] to-[#1a4e7f] hover:from-[#0d3a5f] hover:to-[#1f5c8f] rounded-full transition-all duration-200 shadow-sm hover:shadow-md"
+          className="flex-1 px-4 py-2 text-[13.5px] font-semibold text-white bg-primary rounded-full transition-all duration-200 shadow-sm hover:shadow-md"
         >
           Ver novidades
         </button>

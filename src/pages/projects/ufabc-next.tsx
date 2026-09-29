@@ -72,7 +72,7 @@ const UfabcNext = () => (
           "Felipe Silva e Felipe Tiozo levam a plataforma a mais de 15 mil usuários ativos, com foco em performance e experiência.",
       },
     ]}
-    ctaText="Acessar a Plataforma"
+    ctaText="Acessar"
     ctaHref="https://ufabcnext.com"
   />
 );

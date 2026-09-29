@@ -47,7 +47,7 @@ const LandingPage = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-[#0a2e4f] text-white py-12 md:py-16">
+        <section className="bg-primary text-white py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-6">
             {/* Mobile Layout - Stacked */}
             <div className="flex flex-col gap-8 md:hidden">
@@ -321,7 +321,7 @@ const LandingPage = () => {
         {/* Comunidade */}
         <section
           id="comunidade"
-          className="py-20 bg-[#0a2e4f] text-white text-center"
+          className="py-20 bg-primary text-white text-center"
         >
           <div className="max-w-3xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-4">Junte-se a Nós</h2>

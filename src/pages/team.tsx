@@ -262,11 +262,11 @@ export default function Team() {
             Pessoas por trás
             <br />
             do{" "}
-            <span
-              className="bg-gradient-to-br from-[#0a2e4f] to-primary bg-clip-text text-transparent"
-            >
-              Nexus
-            </span>
+            <img
+              src="/brand/nexus-logo-blue.png"
+              alt="Nexus"
+              className="inline-block h-[1em] w-auto align-[-0.12em]"
+            />
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed mb-8 text-center">
             Somos um time de <strong>{teamMembers.length} pessoas</strong> que acreditam em construir projetos que inspiram e transformam a experiência universitária.
@@ -276,7 +276,7 @@ export default function Team() {
              <SubmitDialog
                             type="volunteer"
                             buttonText={"Quero adicionar meu nome a lista"}
-                            buttonClassName="text-white hover:text-white hover:scale-105 transactions-all duration-300 bg-gradient-to-br from-[#0a2e4f] to-primary border-0"
+                            buttonClassName="text-white hover:text-white hover:scale-105 transactions-all duration-300 bg-primary"
                           />
 
 
@@ -348,7 +348,7 @@ export default function Team() {
                     onClick={() => goToPage(page)}
                     className={
                       currentPage === page
-                        ? "bg-gradient-to-br from-[#0a2e4f] to-primary text-white"
+                        ? "bg-gradient-to-br bg-primary text-white"
                         : "hover:bg-blue-50 hover:text-blue-600"
                     }
                   >
