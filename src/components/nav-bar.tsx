@@ -177,11 +177,7 @@ export default function NavBar() {
                     </div>
 
                     <div className="border-t pt-6">
-                      <Button className="w-full rounded-lg font-medium shadow-sm" asChild>
-                        <a href="/#comunidade" onClick={() => setIsOpen(false)}>
-                          Junte-se a nós
-                        </a>
-                      </Button>
+                      <VolunteerDialog buttonText="Junte-se a nós" type="volunteer" />
                     </div>
                   </nav>
                 </SheetContent>
