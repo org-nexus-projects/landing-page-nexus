@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "#components/ui/avatar";
 import { Button } from "#components/ui/button";
-import SubmitDialog from "#components/submit-dialog";
+import VolunteerDialog from "#components/volunteer-dialog";
 
 import {
   Dialog,
@@ -55,7 +55,7 @@ export default function Team() {
       role: "Diretor de Comunidade e Tecnologia",
       image: "/members/active/nicolas.jpeg",
       linkedin: "https://www.linkedin.com/in/nicolas-greco-160a5b258/",
-      bio: "Entusiasta de usar tecnologia para unir pessoas. Lidera iniciativas para impulsionar o alcance do Nexus e encontrar gente boa. Atualmente, também faz parte do time internacional da Jeeves, fornecendo infraestrutura bancária para startups.",
+      bio: "Entusiasta de usar tecnologia para unir pessoas. Lidera iniciativas para impulsionar o alcance do Nexus e encontrar gente boa.",
     },
     {
       id: 11,
@@ -273,7 +273,7 @@ export default function Team() {
           </p>
         
 
-             <SubmitDialog
+             <VolunteerDialog
                             type="volunteer"
                             buttonText={"Quero adicionar meu nome a lista"}
                             buttonClassName="text-white hover:text-white hover:scale-105 transactions-all duration-300 bg-primary"

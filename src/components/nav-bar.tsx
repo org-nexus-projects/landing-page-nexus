@@ -17,6 +17,7 @@ import {
   DropdownMenuTrigger,
 } from "#components/ui/dropdown-menu";
 import { projects } from "#lib/constants";
+import VolunteerDialog from "./volunteer-dialog";
 
 const dropDownProjects = projects.map((project) => ({
   label: project.title,
@@ -126,14 +127,7 @@ export default function NavBar() {
           </nav>
           
           <div className="hidden lg:flex items-center gap-6">
-
-            <Button 
-              size="sm" 
-              className="rounded-lg px-5 py-2 font-medium text-[14px] shadow-sm hover:shadow transition-all duration-200"
-              asChild
-            >
-              <a href="/#comunidade">Junte-se a nós</a>
-            </Button>
+            <VolunteerDialog type="volunteer" buttonText="Junte-se a nós" />
           </div>
 
           {/* Mobile Menu */}

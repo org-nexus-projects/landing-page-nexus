@@ -1,5 +1,5 @@
 import NavBar from "#components/nav-bar";
-import SubmitDialog from "#components/submit-dialog";
+import VolunteerDialog from "#components/volunteer-dialog";
 import Footer from "#components/footer";
 import {
   Carousel,
@@ -72,7 +72,7 @@ const LandingPage = () => {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <SubmitDialog
+                <VolunteerDialog
                   type="volunteer"
                   buttonText={"Seja um Voluntário"}
                   buttonClassName="bg-white text-black hover:bg-white/70 font-semibold w-full sm:w-auto"
@@ -103,7 +103,7 @@ const LandingPage = () => {
                   Uma plataforma feita por e para estudantes da Universidade Federal do ABC, promovendo mentorias, conteúdo acadêmico e suporte comunitário ao longo da graduação.
                 </p>
                 <div className="flex gap-4 pt-4 justify-center">
-                  <SubmitDialog
+                  <VolunteerDialog
                     type="volunteer"
                     buttonText={"Seja um Voluntário"}
                     buttonClassName="bg-white text-black hover:bg-white/70 font-semibold"
@@ -329,13 +329,13 @@ const LandingPage = () => {
               Faça parte desta comunidade e contribua para o desenvolvimento acadêmico dos alunos da UFABC, seja como mentor, voluntário ou parceiro.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <SubmitDialog
+              <VolunteerDialog
                 type="mentor"
                 buttonText={"Quero ser mentor"}
                 buttonClassName="bg-transparent text-white hover:bg-white/10 font-semibold"
               />
 
-              <SubmitDialog
+              <VolunteerDialog
                 type="volunteer"
                 buttonText={"Quero ser voluntário"}
                 buttonClassName="bg-white text-black hover:bg-white/70 font-semibold"
