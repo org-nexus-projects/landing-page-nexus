@@ -17,7 +17,7 @@ export const projects = [
       id: 3,
       title: "UFABC Cronos",
       description: "Planejador de graduação personalizado para ajudar os alunos a montarem a grade que mais vai gerar valor para a sua carreira e vida pessoal",
-      icon: "./projects/ufabc-cronos.png",
+      icon: "./projects/ufabc-cronos-green.png",
       link: "/ufabc-cronos"
     },
     {

@@ -3,7 +3,7 @@ import { ProjectPage } from "#components/project-page";
 
 const UfabcCronos = () => (
   <ProjectPage
-    logo="/projects/ufabc-cronos.png"
+    fullLogo="/projects/ufabc-cronos-green-full.png"
     logoAlt="UFABC Cronos"
     title="UFABC Cronos"
     tagline="Monte a graduação que vai gerar mais valor para a sua vida."

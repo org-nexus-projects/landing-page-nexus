@@ -22,8 +22,9 @@ export interface ProjectTimelineItem {
 }
 
 export interface ProjectPageProps {
-  logo: string;
+  logo?: string;
   logoAlt: string;
+  fullLogo?: string;
   title: string;
   tagline: string;
   description: string;
@@ -43,6 +44,7 @@ export interface ProjectPageProps {
 export function ProjectPage({
   logo,
   logoAlt,
+  fullLogo,
   title,
   tagline,
   description,
@@ -61,14 +63,26 @@ export function ProjectPage({
       <main className="max-w-5xl mx-auto px-6">
         {/* Hero */}
         <section className="pt-20 pb-24 text-center">
-          <img
-            src={logo}
-            alt={logoAlt}
-            className="w-32 h-32 object-contain mx-auto mb-8 rounded-2xl"
-          />
+          {fullLogo && (
+            <img
+              src={fullLogo}
+              alt={`${logoAlt}`}
+              className="w-[600px] h-auto object-contain mx-auto mb-8"
+            />
+          )}
+          { logo && !fullLogo && (
+            <>
+            <img
+              src={logo}
+              alt={logoAlt}
+              className="w-32 h-32 object-contain mx-auto mb-8 rounded-2xl"
+            />
+            
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6">
             {title}
           </h1>
+          </>
+          )}
           <p className="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto mb-4 leading-relaxed">
             {tagline}
           </p>
