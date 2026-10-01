@@ -8,15 +8,13 @@ const NotFound = () => {
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:",
-      location.pathname
+      location.pathname,
     );
   }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-6">
       <div className="max-w-2xl w-full text-center space-y-16 py-20">
-   
-
         {/* Visual Element - Illustration Space */}
         <div className="py-12">
           <div className="relative max-w-md mx-auto">
@@ -44,9 +42,7 @@ const NotFound = () => {
             size="lg"
             className="px-12 py-6 text-[16px] font-medium rounded-full hover:scale-105 transition-all duration-300 shadow-sm"
           >
-            <a href="/">
-              Voltar para a página inicial
-            </a>
+            <a href="/">Voltar para a página inicial</a>
           </Button>
         </div>
       </div>

@@ -1,4 +1,11 @@
-import { Calendar, Map, Target, TrendingUp, Layers, Lightbulb } from "lucide-react";
+import {
+  Calendar,
+  Map,
+  Target,
+  TrendingUp,
+  Layers,
+  Lightbulb,
+} from "lucide-react";
 import { ProjectPage } from "#components/project-page";
 
 const UfabcCronos = () => (

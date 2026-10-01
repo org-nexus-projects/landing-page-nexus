@@ -15,9 +15,10 @@ export default function DynamicTitle() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const cleanPath = pathname.length > 1 && pathname.endsWith("/")
-      ? pathname.slice(0, -1)
-      : pathname;
+    const cleanPath =
+      pathname.length > 1 && pathname.endsWith("/")
+        ? pathname.slice(0, -1)
+        : pathname;
 
     if (Object.prototype.hasOwnProperty.call(STATIC_TITLES, cleanPath)) {
       updatePageTitle(STATIC_TITLES[cleanPath]);

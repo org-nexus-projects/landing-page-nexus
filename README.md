@@ -1,6 +1,5 @@
 # landing-page-nexus
 
-
 ## Setup
 
 ```bash

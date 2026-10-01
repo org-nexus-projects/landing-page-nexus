@@ -19,10 +19,10 @@ interface VolunteerDialogProps {
   buttonClassName?: string;
 }
 
-export default function VolunteerDialog({ 
-  type, 
-  buttonText, 
-  buttonClassName 
+export default function VolunteerDialog({
+  type,
+  buttonText,
+  buttonClassName,
 }: VolunteerDialogProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -72,9 +72,7 @@ export default function VolunteerDialog({
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button className={buttonClassName}>
-          {buttonText}
-        </Button>
+        <Button className={buttonClassName}>{buttonText}</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

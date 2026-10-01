@@ -1,4 +1,11 @@
-import { GraduationCap, Users, Calendar, BookOpen, Heart, Award } from "lucide-react";
+import {
+  GraduationCap,
+  Users,
+  Calendar,
+  BookOpen,
+  Heart,
+  Award,
+} from "lucide-react";
 import { ProjectPage } from "#components/project-page";
 
 const AuloesNext = () => (

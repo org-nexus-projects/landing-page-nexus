@@ -9,14 +9,15 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+  plugins: [react(), mode === "development" && componentTagger()].filter(
+    Boolean,
+  ),
   resolve: {
     alias: [
-      { find: /^#(.*)$/, replacement: `${path.resolve(__dirname, "./src")}/$1` },
+      {
+        find: /^#(.*)$/,
+        replacement: `${path.resolve(__dirname, "./src")}/$1`,
+      },
     ],
   },
 }));

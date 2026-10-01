@@ -3,7 +3,18 @@ import NavBar from "#components/nav-bar";
 import Footer from "#components/footer";
 import { Button } from "#components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "#components/ui/avatar";
-import { ArrowLeft, Calendar, School, Share2, Twitter, Linkedin, Github, MapPin, AtSign, Check } from "lucide-react";
+import {
+  ArrowLeft,
+  Calendar,
+  School,
+  Share2,
+  Twitter,
+  Linkedin,
+  Github,
+  MapPin,
+  AtSign,
+  Check,
+} from "lucide-react";
 import { getPostBySlug, type Author } from "#data/blog-posts";
 import { blog_categories } from "#lib/constants";
 import { useState } from "react";
@@ -32,9 +43,9 @@ function AuthorCard({ author }: { author: Author }) {
           {author.social && (
             <div className="flex gap-3">
               {author.social.twitter && (
-                <a 
-                  href={author.social.twitter} 
-                  target="_blank" 
+                <a
+                  href={author.social.twitter}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -42,9 +53,9 @@ function AuthorCard({ author }: { author: Author }) {
                 </a>
               )}
               {author.social.linkedin && (
-                <a 
-                  href={author.social.linkedin} 
-                  target="_blank" 
+                <a
+                  href={author.social.linkedin}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -52,9 +63,9 @@ function AuthorCard({ author }: { author: Author }) {
                 </a>
               )}
               {author.social.github && (
-                <a 
-                  href={author.social.github} 
-                  target="_blank" 
+                <a
+                  href={author.social.github}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -72,7 +83,7 @@ function AuthorCard({ author }: { author: Author }) {
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const [copied, setCopied] = useState(false);
-  
+
   const post = slug ? getPostBySlug(slug) : null;
   const authors = post?.authors ?? [];
 
@@ -83,7 +94,7 @@ export default function BlogPost() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy:', err);
+      console.error("Failed to copy:", err);
     }
   };
 
@@ -113,14 +124,19 @@ export default function BlogPost() {
       <NavBar />
 
       <article className="container mx-auto px-6 py-12 max-w-4xl">
-        <Link to="/blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-blue-600 transition-colors mb-8">
+        <Link
+          to="/blog"
+          className="inline-flex items-center text-sm text-muted-foreground hover:text-blue-600 transition-colors mb-8"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Voltar ao Blog
         </Link>
 
         <div className="flex flex-wrap gap-2 mb-6">
           {post.categories.map((categoryId) => {
-            const category = blog_categories.find((item) => item.id === categoryId);
+            const category = blog_categories.find(
+              (item) => item.id === categoryId,
+            );
 
             return (
               <span
@@ -150,15 +166,13 @@ export default function BlogPost() {
           </div>
         </div>
 
-    
         {/* Author Section */}
         <div className="flex items-center justify-between mb-12 pb-8 border-b">
+          <AuthorsHoverRow authors={authors} />
 
-        <AuthorsHoverRow authors={authors} />
-         
-          <Button 
-            variant="outline" 
-            size="sm" 
+          <Button
+            variant="outline"
+            size="sm"
             className="hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200"
             onClick={handleShareClick}
           >
@@ -178,15 +192,16 @@ export default function BlogPost() {
 
         {/* Featured Image */}
         <div className="mb-12 rounded-2xl overflow-hidden shadow-lg">
-          <img 
-            src={post.image} 
+          <img
+            src={post.image}
             alt={post.title}
             className="w-full h-auto object-cover"
           />
         </div>
 
         {/* Content */}
-        <div className="prose prose-lg prose-slate max-w-none dark:prose-invert
+        <div
+          className="prose prose-lg prose-slate max-w-none dark:prose-invert
           prose-headings:font-bold 
           prose-headings:tracking-tight
           prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
@@ -203,7 +218,8 @@ export default function BlogPost() {
           [&_pre_code]:!bg-transparent [&_pre_code]:!text-inherit [&_pre_code]:!p-0
           [&_code]:!bg-gray-800 [&_code]:!text-gray-200 [&_code]:!px-1.5 [&_code]:!py-0.5 [&_code]:!rounded [&_code]:!text-sm [&_code]:border [&_code]:border-[#30363d]
           [&_.shiki]:!bg-[#0d1117] [&_.shiki]:rounded-lg [&_.shiki]:my-6 [&_.shiki]:shadow-lg
-        ">
+        "
+        >
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
 
@@ -215,7 +231,7 @@ export default function BlogPost() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
-                <span 
+                <span
                   key={tag}
                   className="px-3 py-1 rounded-full text-sm bg-muted hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer"
                 >
@@ -229,9 +245,11 @@ export default function BlogPost() {
         {/* Authors Section */}
         <div className="mt-12">
           <h3 className="text-2xl font-bold mb-6">
-            {post.authors && post.authors.length > 1 ? "Sobre os Autores" : "Sobre o Autor"}
+            {post.authors && post.authors.length > 1
+              ? "Sobre os Autores"
+              : "Sobre o Autor"}
           </h3>
-          
+
           {authors.length > 1 ? (
             <Carousel
               opts={{
@@ -242,7 +260,10 @@ export default function BlogPost() {
             >
               <CarouselContent>
                 {post.authors.map((author, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/2"
+                  >
                     <AuthorCard author={author} />
                   </CarouselItem>
                 ))}
@@ -258,14 +279,29 @@ export default function BlogPost() {
         {/* Navigation */}
         <div className="mt-12 pt-8 border-t flex justify-between items-center">
           <Link to="/blog">
-            <Button variant="outline" className="hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">
+            <Button
+              variant="outline"
+              className="hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200"
+            >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Todos os Posts
             </Button>
           </Link>
           <div className="flex gap-2">
-            <Button variant="ghost" size="sm" className="hover:bg-blue-50 hover:text-blue-600">← Anterior</Button>
-            <Button variant="ghost" size="sm" className="hover:bg-blue-50 hover:text-blue-600">Próximo →</Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hover:bg-blue-50 hover:text-blue-600"
+            >
+              ← Anterior
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hover:bg-blue-50 hover:text-blue-600"
+            >
+              Próximo →
+            </Button>
           </div>
         </div>
       </article>
@@ -295,7 +331,12 @@ function AuthorsHoverRow({ authors }: { authors: Author[] }) {
     <div className="mb-8">
       <div className="flex items-center gap-3">
         {authors.map((author, idx) => (
-          <div key={idx} className="relative group" tabIndex={0} aria-describedby={`author-card-${idx}`}>
+          <div
+            key={idx}
+            className="relative group"
+            tabIndex={0}
+            aria-describedby={`author-card-${idx}`}
+          >
             <div className="cursor-pointer">
               <Avatar className="h-10 w-10 border-2">
                 <AvatarImage src={author.avatar} alt={author.name} />
@@ -319,8 +360,12 @@ function AuthorsHoverRow({ authors }: { authors: Author[] }) {
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="font-semibold text-sm">{author.name}</div>
-                        <div className="text-xs text-muted-foreground">{author.role}</div>
+                        <div className="font-semibold text-sm">
+                          {author.name}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {author.role}
+                        </div>
                       </div>
                     </div>
                     <div className="my-3 border-t pt-3">
@@ -350,7 +395,7 @@ function AuthorsHoverRow({ authors }: { authors: Author[] }) {
 
                 <div className="mt-3 pt-3 border-t">
                   <a
-                    href={ author.social?.linkedin }
+                    href={author.social?.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-center rounded-md px-3 py-2 bg-muted/40 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm"

@@ -12,12 +12,16 @@ export function updatePageTitle(title?: string | null, exact = false) {
   const newTitle = formatTitle(title, exact);
   document.title = newTitle;
 
-  const ogTitle = document.querySelector<HTMLMetaElement>('meta[property="og:title"]');
+  const ogTitle = document.querySelector<HTMLMetaElement>(
+    'meta[property="og:title"]',
+  );
   if (ogTitle) {
     ogTitle.content = newTitle;
   }
 
-  const twitterTitle = document.querySelector<HTMLMetaElement>('meta[name="twitter:title"]');
+  const twitterTitle = document.querySelector<HTMLMetaElement>(
+    'meta[name="twitter:title"]',
+  );
   if (twitterTitle) {
     twitterTitle.content = newTitle;
   }

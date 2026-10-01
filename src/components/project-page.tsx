@@ -70,18 +70,18 @@ export function ProjectPage({
               className="w-[600px] h-auto object-contain mx-auto mb-8"
             />
           )}
-          { logo && !fullLogo && (
+          {logo && !fullLogo && (
             <>
-            <img
-              src={logo}
-              alt={logoAlt}
-              className="w-32 h-32 object-contain mx-auto mb-8 rounded-2xl"
-            />
-            
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6">
-            {title}
-          </h1>
-          </>
+              <img
+                src={logo}
+                alt={logoAlt}
+                className="w-32 h-32 object-contain mx-auto mb-8 rounded-2xl"
+              />
+
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6">
+                {title}
+              </h1>
+            </>
           )}
           <p className="text-xl md:text-2xl text-gray-900 font-bold max-w-3xl mx-auto mb-4 leading-relaxed">
             {tagline}
@@ -92,7 +92,10 @@ export function ProjectPage({
           <div className="flex flex-wrap gap-3 justify-center">
             {ctaHref ? (
               <a href={ctaHref} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white px-8"
+                >
                   {ctaText}
                   <ExternalLink className="ml-2" size={16} />
                 </Button>
@@ -106,31 +109,43 @@ export function ProjectPage({
                 {ctaText}
               </Button>
             )}
-            {secondaryCta && (
-              secondaryCta.href ? (
-                <a href={secondaryCta.href} target="_blank" rel="noopener noreferrer">
+            {secondaryCta &&
+              (secondaryCta.href ? (
+                <a
+                  href={secondaryCta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button size="lg" variant="outline" className="px-8">
                     {secondaryCta.text}
                   </Button>
                 </a>
               ) : (
-                <Button size="lg" variant="outline" className="px-8" onClick={secondaryCta.onClick}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="px-8"
+                  onClick={secondaryCta.onClick}
+                >
                   {secondaryCta.text}
                 </Button>
-              )
-            )}
+              ))}
           </div>
         </section>
 
         {/* Stats */}
         <section className="py-16 border-t border-b border-gray-100">
-          <div className={`grid gap-8 ${stats.length <= 3 ? "grid-cols-3" : "grid-cols-2 md:grid-cols-4"}`}>
+          <div
+            className={`grid gap-8 ${stats.length <= 3 ? "grid-cols-3" : "grid-cols-2 md:grid-cols-4"}`}
+          >
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
-                <p className="text-sm text-gray-500 font-medium">{stat.label}</p>
+                <p className="text-sm text-gray-500 font-medium">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -145,8 +160,12 @@ export function ProjectPage({
             {features.map((feature, i) => (
               <div key={i} className="space-y-3">
                 <div className="text-primary">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-500 leading-relaxed text-sm">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -188,12 +207,16 @@ export function ProjectPage({
             Pronto para começar?
           </h2>
           <p className="text-gray-500 mb-8 max-w-md mx-auto">
-            Faça parte da comunidade que está transformando a experiência universitária na UFABC.
+            Faça parte da comunidade que está transformando a experiência
+            universitária na UFABC.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             {ctaHref ? (
               <a href={ctaHref} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white px-8"
+                >
                   {ctaText}
                   <ExternalLink className="ml-2" size={16} />
                 </Button>
