@@ -168,7 +168,7 @@ const LandingPage = () => {
 
 
                 {/* Impact Numbers Section */}
-        <section className="bg-gradient-to-br from-[#0a2e4f] to-primary" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <section className="bg-gradient-to-br from-primary to-primary" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center text-white">
               Nosso Impacto
@@ -256,7 +256,7 @@ const LandingPage = () => {
           }}
         >
           {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-[#0a2e4f]/80"></div>
+          <div className="absolute inset-0 bg-primary/80"></div>
           
           <div className="relative max-w-7xl mx-auto px-6 flex flex-col items-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-white">
@@ -267,7 +267,7 @@ const LandingPage = () => {
             </p>
 
             <Button
-              className="transition-all duration-300 p-8 hover:scale-105 bg-gradient-to-br from-[#0a2e4f] to-primary hover:opacity-90"
+              className="transition-all duration-300 p-8 hover:scale-105 bg-gradient-to-br from-primary to-primary hover:opacity-90"
             >
               <a href="/team" className="text-white text-xl font-medium">
                 Conheça nosso time

@@ -79,7 +79,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link 
       to={`/blog/${post.slug}`}
-      className="group block rounded-2xl overflow-hidden bg-card border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      className="group block rounded-2xl overflow-hidden bg-white border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
     >
       {/* Image */}
       <div className="aspect-[16/9] overflow-hidden bg-muted">

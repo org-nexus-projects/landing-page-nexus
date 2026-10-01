@@ -83,16 +83,16 @@ export function ProjectPage({
           </h1>
           </>
           )}
-          <p className="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto mb-4 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-900 font-bold max-w-3xl mx-auto mb-4 leading-relaxed">
             {tagline}
           </p>
-          <p className="text-base text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
             {description}
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             {ctaHref ? (
               <a href={ctaHref} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#0a2e4f] hover:bg-[#0a2e4f]/90 text-white px-8">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
                   {ctaText}
                   <ExternalLink className="ml-2" size={16} />
                 </Button>
@@ -100,7 +100,7 @@ export function ProjectPage({
             ) : (
               <Button
                 size="lg"
-                className="bg-[#0a2e4f] hover:bg-[#0a2e4f]/90 text-white px-8"
+                className="bg-primary hover:bg-primary/90 text-white px-8"
                 onClick={ctaOnClick}
               >
                 {ctaText}
@@ -127,7 +127,7 @@ export function ProjectPage({
           <div className={`grid gap-8 ${stats.length <= 3 ? "grid-cols-3" : "grid-cols-2 md:grid-cols-4"}`}>
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#0a2e4f] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
                 <p className="text-sm text-gray-500 font-medium">{stat.label}</p>
@@ -144,7 +144,7 @@ export function ProjectPage({
           <div className="grid md:grid-cols-3 gap-10">
             {features.map((feature, i) => (
               <div key={i} className="space-y-3">
-                <div className="text-[#0a2e4f]">{feature.icon}</div>
+                <div className="text-primary">{feature.icon}</div>
                 <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-500 leading-relaxed text-sm">{feature.description}</p>
               </div>
@@ -164,8 +164,8 @@ export function ProjectPage({
                 <div className="space-y-12 pl-8">
                   {timeline.map((item, i) => (
                     <div key={i} className="relative">
-                      <div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-[#0a2e4f] ring-4 ring-white" />
-                      <div className="text-xs font-semibold text-[#0a2e4f] mb-1 uppercase tracking-widest">
+                      <div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-white" />
+                      <div className="text-xs font-semibold text-primary mb-1 uppercase tracking-widest">
                         {item.year}
                       </div>
                       <h3 className="text-base font-semibold text-gray-900 mb-1">
@@ -193,7 +193,7 @@ export function ProjectPage({
           <div className="flex flex-wrap gap-3 justify-center">
             {ctaHref ? (
               <a href={ctaHref} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#0a2e4f] hover:bg-[#0a2e4f]/90 text-white px-8">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
                   {ctaText}
                   <ExternalLink className="ml-2" size={16} />
                 </Button>
@@ -201,7 +201,7 @@ export function ProjectPage({
             ) : (
               <Button
                 size="lg"
-                className="bg-[#0a2e4f] hover:bg-[#0a2e4f]/90 text-white px-8"
+                className="bg-primary hover:bg-primary/90 text-white px-8"
                 onClick={ctaOnClick}
               >
                 {ctaText}

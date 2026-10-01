@@ -198,7 +198,7 @@ export default function Status() {
                     href={service.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-gray-900 hover:text-[#0a2e4f] transition-colors"
+                    className="font-semibold text-gray-900 hover:text-primary transition-colors"
                   >
                     {service.name}
                   </a>
