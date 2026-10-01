@@ -42,7 +42,9 @@ const SERVICES: Service[] = [
 const TIMEOUT_MS = 6000;
 const POLL_INTERVAL_MS = 30_000;
 
-async function pingService(checkUrl: string): Promise<{ ok: boolean; latency: number }> {
+async function pingService(
+  checkUrl: string,
+): Promise<{ ok: boolean; latency: number }> {
   const start = Date.now();
   try {
     const controller = new AbortController();
@@ -62,7 +64,10 @@ function latencyToStatus(latency: number): ServiceStatus {
   return "down";
 }
 
-const STATUS_CONFIG: Record<ServiceStatus, { label: string; color: string; dot: string }> = {
+const STATUS_CONFIG: Record<
+  ServiceStatus,
+  { label: string; color: string; dot: string }
+> = {
   checking: {
     label: "Verificando...",
     color: "text-gray-400",
@@ -99,8 +104,8 @@ export default function Status() {
       SERVICES.map((s) => [
         s.name,
         { status: "checking" as ServiceStatus, latency: null, checkedAt: null },
-      ])
-    )
+      ]),
+    ),
   );
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -108,8 +113,11 @@ export default function Status() {
     setIsRefreshing(true);
     setResults((prev) =>
       Object.fromEntries(
-        SERVICES.map((s) => [s.name, { ...prev[s.name], status: "checking" as ServiceStatus }])
-      )
+        SERVICES.map((s) => [
+          s.name,
+          { ...prev[s.name], status: "checking" as ServiceStatus },
+        ]),
+      ),
     );
 
     await Promise.all(
@@ -118,9 +126,13 @@ export default function Status() {
         const status: ServiceStatus = ok ? latencyToStatus(latency) : "down";
         setResults((prev) => ({
           ...prev,
-          [service.name]: { status, latency: ok ? latency : null, checkedAt: new Date() },
+          [service.name]: {
+            status,
+            latency: ok ? latency : null,
+            checkedAt: new Date(),
+          },
         }));
-      })
+      }),
     );
 
     setIsRefreshing(false);
@@ -139,10 +151,10 @@ export default function Status() {
     overall === "operational"
       ? "bg-emerald-50 border-emerald-200"
       : overall === "degraded"
-      ? "bg-amber-50 border-amber-200"
-      : overall === "down"
-      ? "bg-red-50 border-red-200"
-      : "bg-gray-50 border-gray-200";
+        ? "bg-amber-50 border-amber-200"
+        : overall === "down"
+          ? "bg-red-50 border-red-200"
+          : "bg-gray-50 border-gray-200";
 
   return (
     <div className="min-h-screen bg-white">
@@ -151,24 +163,30 @@ export default function Status() {
       <main className="max-w-3xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Status dos Serviços</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            Status dos Serviços
+          </h1>
           <p className="text-gray-500">
             Monitoramento em tempo real dos projetos do Nexus.
           </p>
         </div>
 
         {/* Overall banner */}
-        <div className={`rounded-xl border p-5 mb-10 flex items-center justify-between ${bannerColor}`}>
+        <div
+          className={`rounded-xl border p-5 mb-10 flex items-center justify-between ${bannerColor}`}
+        >
           <div className="flex items-center gap-3">
-            <span className={`w-3 h-3 rounded-full flex-shrink-0 ${overallCfg.dot}`} />
+            <span
+              className={`w-3 h-3 rounded-full flex-shrink-0 ${overallCfg.dot}`}
+            />
             <span className={`font-semibold text-base ${overallCfg.color}`}>
               {overall === "operational"
                 ? "Todos os sistemas operacionais"
                 : overall === "degraded"
-                ? "Alguns sistemas com lentidão"
-                : overall === "down"
-                ? "Serviços com interrupção"
-                : "Verificando sistemas..."}
+                  ? "Alguns sistemas com lentidão"
+                  : overall === "down"
+                    ? "Serviços com interrupção"
+                    : "Verificando sistemas..."}
             </span>
           </div>
           <Button
@@ -178,7 +196,10 @@ export default function Status() {
             disabled={isRefreshing}
             className="text-gray-500 hover:text-gray-900 gap-2"
           >
-            <RefreshCw size={14} className={isRefreshing ? "animate-spin" : ""} />
+            <RefreshCw
+              size={14}
+              className={isRefreshing ? "animate-spin" : ""}
+            />
             Atualizar
           </Button>
         </div>
@@ -198,11 +219,13 @@ export default function Status() {
                     href={service.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-gray-900 hover:text-[#0a2e4f] transition-colors"
+                    className="font-semibold text-gray-900 hover:text-primary transition-colors"
                   >
                     {service.name}
                   </a>
-                  <span className="text-sm text-gray-400">{service.description}</span>
+                  <span className="text-sm text-gray-400">
+                    {service.description}
+                  </span>
                 </div>
 
                 <div className="flex items-center gap-4">
@@ -212,8 +235,12 @@ export default function Status() {
                     </span>
                   )}
                   <div className="flex items-center gap-2">
-                    <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${cfg.dot}`} />
-                    <span className={`text-sm font-medium ${cfg.color}`}>{cfg.label}</span>
+                    <span
+                      className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${cfg.dot}`}
+                    />
+                    <span className={`text-sm font-medium ${cfg.color}`}>
+                      {cfg.label}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -227,16 +254,22 @@ export default function Status() {
             Última verificação:{" "}
             {Object.values(results)
               .filter((r) => r.checkedAt)
-              .sort((a, b) => (b.checkedAt?.getTime() ?? 0) - (a.checkedAt?.getTime() ?? 0))[0]
-              ?.checkedAt?.toLocaleTimeString("pt-BR")}
-            {" "}· Atualiza automaticamente a cada 30s
+              .sort(
+                (a, b) =>
+                  (b.checkedAt?.getTime() ?? 0) - (a.checkedAt?.getTime() ?? 0),
+              )[0]
+              ?.checkedAt?.toLocaleTimeString("pt-BR")}{" "}
+            · Atualiza automaticamente a cada 30s
           </p>
         )}
 
         {/* Note */}
         <div className="mt-12 p-4 bg-gray-50 rounded-lg">
           <p className="text-xs text-gray-400 leading-relaxed">
-            <strong className="text-gray-500">Como funciona:</strong> O status é verificado diretamente do seu navegador via requisição HTTP. "Lento" indica tempo de resposta entre 800ms e 3s. "Fora do ar" indica falha de conexão ou timeout após 6s.
+            <strong className="text-gray-500">Como funciona:</strong> O status é
+            verificado diretamente do seu navegador via requisição HTTP. "Lento"
+            indica tempo de resposta entre 800ms e 3s. "Fora do ar" indica falha
+            de conexão ou timeout após 6s.
           </p>
         </div>
       </main>

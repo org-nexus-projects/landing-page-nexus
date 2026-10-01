@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Bell, Search } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "#components/ui/avatar";
@@ -12,18 +11,16 @@ const Header = () => {
           <div className="flex items-center">
             <div className="text-primary font-bold text-2xl">
               <span className="flex items-center">
-                <svg 
-                  className="w-7 h-7 text-primary mr-1" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  className="w-7 h-7 text-primary mr-1"
+                  viewBox="0 0 24 24"
                   fill="currentColor"
                 >
                   <path d="M21.4 5.6L12 0 2.6 5.6V18.4L12 24l9.4-5.6V5.6z" />
-                  <path 
-                    fill="#fff" 
-                    d="M12 15V8l-5 3v7l5 3 5-3v-7l-5-3z" 
-                  />
+                  <path fill="#fff" d="M12 15V8l-5 3v7l5 3 5-3v-7l-5-3z" />
                 </svg>
-                UFABC<span className="text-edu-light-blue font-light">next</span>
+                UFABC
+                <span className="text-edu-light-blue font-light">next</span>
               </span>
             </div>
           </div>
@@ -49,7 +46,9 @@ const Header = () => {
             </div>
             <Avatar className="h-9 w-9 border">
               <AvatarImage src="" />
-              <AvatarFallback className="bg-primary text-primary-foreground">JS</AvatarFallback>
+              <AvatarFallback className="bg-primary text-primary-foreground">
+                JS
+              </AvatarFallback>
             </Avatar>
           </div>
         </div>

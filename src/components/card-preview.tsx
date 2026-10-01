@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "#components/ui/card";
 import { Badge } from "#components/ui/badge";
@@ -14,9 +13,14 @@ interface CardPreviewProps {
 const CardPreview = ({ color = "bg-primary", className }: CardPreviewProps) => {
   return (
     <div className="p-6 flex justify-center">
-      <Card className={cn("max-w-[340px] overflow-hidden shadow-sm hover:shadow-md transition-shadow", className)}>
+      <Card
+        className={cn(
+          "max-w-[340px] overflow-hidden shadow-sm hover:shadow-md transition-shadow",
+          className,
+        )}
+      >
         <div className={`h-4 ${color} rounded-t-xl`} />
-        
+
         <CardContent className="p-6">
           <div className="flex justify-between items-center mb-4">
             <Badge variant="outline" className="text-xs font-medium">
@@ -27,9 +31,7 @@ const CardPreview = ({ color = "bg-primary", className }: CardPreviewProps) => {
             </span>
           </div>
 
-          <h3 className="text-lg font-bold mb-2">
-            Fenômenos Térmicos
-          </h3>
+          <h3 className="text-lg font-bold mb-2">Fenômenos Térmicos</h3>
 
           <p className="text-sm text-muted-foreground mb-1">
             Campus: Santo André
@@ -39,11 +41,7 @@ const CardPreview = ({ color = "bg-primary", className }: CardPreviewProps) => {
           </p>
 
           <div className="flex justify-center">
-            <Button
-              variant="outline"
-              className="px-6"
-              asChild
-            >
+            <Button variant="outline" className="px-6" asChild>
               <a href="#" target="_blank" rel="noopener">
                 Entrar <ExternalLink size={16} className="ml-1" />
               </a>

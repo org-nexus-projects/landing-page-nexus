@@ -18,7 +18,7 @@ export default function Team() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
-  interface Member{
+  interface Member {
     id: number;
     name: string;
     role: string;
@@ -105,7 +105,7 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/rafaelguerra/",
       bio: "Engenheiro Fullstack com vocação para resolver problemas de todas as áreas. Graduando em ciência da computação na UFABC, compõe também o time internacional da Jeeves, forncendo infraestrutura bancária para startups.",
     },
-    
+
     {
       id: 9,
       name: "Carlos Alencar",
@@ -121,7 +121,8 @@ export default function Team() {
       image: "/members/active/joao-zanardo.png",
       linkedin: "https://www.linkedin.com/in/jo%C3%A3o-zanardo/",
       bio: "Engenheiro de software com foco no desenvolvimento de soluções escaláveis e eficientes backend. Graduou-se no bacharelado de ciência e tencologia da UFABC e conta com passagens por empresas como Santander, BTG Pactual e Mercado Livre",
-    },    {
+    },
+    {
       id: 15,
       name: "Vitor Facioni",
       role: "Engenheiro de Software",
@@ -148,7 +149,7 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/brian-andreossi/",
       bio: "Consultor técnico especializado em arquitetura de software e sistemas de alta volumetria. Durante a graduação foi monitor de disciplinas de Redes e Algoritimos, além de desenvolver uma pesquisa a respeito das heurísticas computacionais baseadas em grafos para identificação e redução de conflitos de interesse em bancas de concursos. Sua experiência profissional conta com passagens pelo Banco Itaú e Mercado Livre",
     },
-  ]
+  ];
 
   const formerMembersByYear = [
     {
@@ -161,7 +162,7 @@ export default function Team() {
           image: "/members/former/felipe-silva.png",
           linkedin: "https://www.linkedin.com/in/feosilva/",
           side: "left",
-          bio: "Founder team do projeto UFABC Next. Empreendedor e cofundador da BeConfident. Como CPO, ajudou a transformar a visão em produto, liderando desenvolvimento de soluções educacionais que impactam milhares de alunos globalmente. Apaixonado por tecnologia, educação e experiências que democratizam oportunidades de aprendizado para todos."
+          bio: "Founder team do projeto UFABC Next. Empreendedor e cofundador da BeConfident. Como CPO, ajudou a transformar a visão em produto, liderando desenvolvimento de soluções educacionais que impactam milhares de alunos globalmente. Apaixonado por tecnologia, educação e experiências que democratizam oportunidades de aprendizado para todos.",
         },
         {
           id: "2019-2",
@@ -170,7 +171,7 @@ export default function Team() {
           image: "/members/former/felipe-tiozo.png",
           linkedin: "https://www.linkedin.com/in/felipetiozo/",
           side: "right",
-          bio: "Founder team do projeto UFABC Next. Empreendedor e engenheiro de software, Co-Founder e CTO da BeConfident, plataforma de aprendizado de inglês baseada em IA com atuação global. Experiência em liderança técnica, produtos digitais e edtech, com passagem por startups e empresas de tecnologia.Apaixonado por construir soluções escaláveis, centradas no usuário e com impacto real em educação e tecnologia."
+          bio: "Founder team do projeto UFABC Next. Empreendedor e engenheiro de software, Co-Founder e CTO da BeConfident, plataforma de aprendizado de inglês baseada em IA com atuação global. Experiência em liderança técnica, produtos digitais e edtech, com passagem por startups e empresas de tecnologia.Apaixonado por construir soluções escaláveis, centradas no usuário e com impacto real em educação e tecnologia.",
         },
         {
           id: "2019-3",
@@ -179,14 +180,13 @@ export default function Team() {
           image: "/members/former/felipe-augusto.png",
           linkedin: "https://www.linkedin.com/in/felipeaugustodev/",
           side: "left",
-          bio: "Founder team do projeto UFABC Next. Software engineer na QA Wolf construindos a nova era dos testes de software. Apaixonado por criar, projetar e implementar novas ideias, aprendiz ao longo da vida, leitor assíduo e entusiasta de TypeScript."
+          bio: "Founder team do projeto UFABC Next. Software engineer na QA Wolf construindos a nova era dos testes de software. Apaixonado por criar, projetar e implementar novas ideias, aprendiz ao longo da vida, leitor assíduo e entusiasta de TypeScript.",
         },
-      ]
+      ],
     },
     {
       year: "2024",
       members: [
-        
         {
           id: "2024-1",
           name: "Vinicius Santana",
@@ -194,14 +194,13 @@ export default function Team() {
           image: "/members/former/vinicius-santana.png",
           linkedin: "https://www.linkedin.com/in/vinicius-santana-santos/",
           side: "right",
-          bio: "Atuou como engenheiro de software no projeto UFABC Next, com foco em soluções backend. Atualmente, capacita decisões mais inteligentes com dados sobre profissionais, empresas e tendências de mercado na empresa internacionalMixRank"
+          bio: "Atuou como engenheiro de software no projeto UFABC Next, com foco em soluções backend. Atualmente, capacita decisões mais inteligentes com dados sobre profissionais, empresas e tendências de mercado na empresa internacionalMixRank",
         },
-      ]
+      ],
     },
     {
       year: "2025",
       members: [
-        
         {
           id: "2025-1",
           name: "Felipe Sckurzenski",
@@ -209,14 +208,13 @@ export default function Team() {
           image: "",
           linkedin: "",
           side: "right",
-          bio: "Aulões next"
+          bio: "Aulões next",
         },
-      ]
+      ],
     },
     {
       year: "2025",
       members: [
-        
         {
           id: 5,
           name: "Vitória Polato",
@@ -224,15 +222,15 @@ export default function Team() {
           image: "",
           linkedin: "",
           side: "right",
-          bio: "Aulões next"
+          bio: "Aulões next",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   // Flatten all former members into a single array
   const allFormerMembers = formerMembersByYear.flatMap((yearGroup) =>
-    yearGroup.members.map((member) => ({ ...member, year: yearGroup.year }))
+    yearGroup.members.map((member) => ({ ...member, year: yearGroup.year })),
   );
 
   // Calculate pagination
@@ -244,9 +242,9 @@ export default function Team() {
   const goToPage = (page: number) => {
     setCurrentPage(page);
     // Scroll to the former members section
-    const section = document.getElementById('former-members-section');
+    const section = document.getElementById("former-members-section");
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -269,23 +267,26 @@ export default function Team() {
             />
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed mb-8 text-center">
-            Somos um time de <strong>{teamMembers.length} pessoas</strong> que acreditam em construir projetos que inspiram e transformam a experiência universitária.
+            Somos um time de <strong>{teamMembers.length} pessoas</strong> que
+            acreditam em construir projetos que inspiram e transformam a
+            experiência universitária.
           </p>
-        
 
-             <VolunteerDialog
-                            type="volunteer"
-                            buttonText={"Quero adicionar meu nome a lista"}
-                            buttonClassName="text-white hover:text-white hover:scale-105 transactions-all duration-300 bg-primary"
-                          />
-
-
+          <VolunteerDialog
+            type="volunteer"
+            buttonText={"Quero adicionar meu nome a lista"}
+            buttonClassName="text-white hover:text-white hover:scale-105 transactions-all duration-300 bg-primary"
+          />
         </div>
 
         {/* Team Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
           {teamMembers.map((member) => (
-            <MemberCard key={member.id} member={member} onClick={() => handleMemberClick(member)} />
+            <MemberCard
+              key={member.id}
+              member={member}
+              onClick={() => handleMemberClick(member)}
+            />
           ))}
         </div>
 
@@ -299,7 +300,11 @@ export default function Team() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
           {specialMembers.map((member) => (
-            <MemberCard key={member.id} member={member} onClick={() => handleMemberClick(member)} />
+            <MemberCard
+              key={member.id}
+              member={member}
+              onClick={() => handleMemberClick(member)}
+            />
           ))}
         </div>
 
@@ -310,7 +315,8 @@ export default function Team() {
               Ex-Membros
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Que deixaram seu legado na missão de construir soluções para a comunidade acadêmica
+              Que deixaram seu legado na missão de construir soluções para a
+              comunidade acadêmica
             </p>
           </div>
 
@@ -338,23 +344,25 @@ export default function Team() {
               >
                 Anterior
               </Button>
-              
+
               <div className="flex gap-1">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => goToPage(page)}
-                    className={
-                      currentPage === page
-                        ? "bg-gradient-to-br bg-primary text-white"
-                        : "hover:bg-blue-50 hover:text-blue-600"
-                    }
-                  >
-                    {page}
-                  </Button>
-                ))}
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                  (page) => (
+                    <Button
+                      key={page}
+                      variant={currentPage === page ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => goToPage(page)}
+                      className={
+                        currentPage === page
+                          ? "bg-gradient-to-br bg-primary text-white"
+                          : "hover:bg-blue-50 hover:text-blue-600"
+                      }
+                    >
+                      {page}
+                    </Button>
+                  ),
+                )}
               </div>
 
               <Button
@@ -396,14 +404,16 @@ export default function Team() {
                     {selectedMember.name}
                   </h3>
                   <p className="text-base font-medium text-muted-foreground">
-                    {selectedMember.role || `Ex-membro • ${selectedMember.year}`}
+                    {selectedMember.role ||
+                      `Ex-membro • ${selectedMember.year}`}
                   </p>
                 </div>
 
                 {/* Bio */}
                 <div className="w-full">
                   <p className="text-sm text-muted-foreground leading-relaxed text-left px-2">
-                    {selectedMember.bio || "Contribuiu para o crescimento do Instituto Nexus e deixou um legado importante para a comunidade acadêmica da UFABC."}
+                    {selectedMember.bio ||
+                      "Contribuiu para o crescimento do Instituto Nexus e deixou um legado importante para a comunidade acadêmica da UFABC."}
                   </p>
                 </div>
 
@@ -415,10 +425,12 @@ export default function Team() {
                     rel="noopener noreferrer"
                     className="w-full"
                   >
-                    <Button
-                      className="w-full bg-[#0077b5] hover:bg-[#006399] text-white gap-2"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <Button className="w-full bg-[#0077b5] hover:bg-[#006399] text-white gap-2">
+                      <svg
+                        className="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                       </svg>
                       Ver perfil no LinkedIn
@@ -447,7 +459,11 @@ function MemberCard({ member, onClick }: { member: any; onClick: () => void }) {
         <div className="flex-shrink-0">
           <div className="overflow-hidden rounded-xl">
             <Avatar className="w-20 h-20">
-              <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+              <AvatarImage
+                src={member.image}
+                alt={member.name}
+                className="object-cover"
+              />
               <AvatarFallback className="bg-muted text-muted-foreground text-base font-semibold">
                 {member.name.slice(0, 2).toUpperCase()}
               </AvatarFallback>
@@ -469,7 +485,7 @@ function MemberCard({ member, onClick }: { member: any; onClick: () => void }) {
             </div>
 
             {/* Social Icon */}
-            
+
             {member.linkedin && (
               <a
                 href={member.linkedin}
@@ -477,17 +493,22 @@ function MemberCard({ member, onClick }: { member: any; onClick: () => void }) {
                 rel="noopener noreferrer"
                 className="flex-shrink-0 p-2 hover:bg-blue-50 rounded-lg transition-colors duration-200"
                 onClick={(e) => e.stopPropagation()}
-            >
-              <svg className="w-5 h-5 text-muted-foreground hover:text-blue-600 transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </a>
+              >
+                <svg
+                  className="w-5 h-5 text-muted-foreground hover:text-blue-600 transition-colors"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
             )}
           </div>
 
           {/* Description/Bio */}
           <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
-            {member.bio || `Membro dedicado da equipe Nexus, contribuindo com expertise em ${member.role.toLowerCase()} para construir soluções inovadoras para a comunidade acadêmica.`}
+            {member.bio ||
+              `Membro dedicado da equipe Nexus, contribuindo com expertise em ${member.role.toLowerCase()} para construir soluções inovadoras para a comunidade acadêmica.`}
           </p>
         </div>
       </div>
@@ -495,7 +516,15 @@ function MemberCard({ member, onClick }: { member: any; onClick: () => void }) {
   );
 }
 
-function FormerMemberCard({ member, year, onClick }: { member: any; year: string; onClick: () => void }) {
+function FormerMemberCard({
+  member,
+  year,
+  onClick,
+}: {
+  member: any;
+  year: string;
+  onClick: () => void;
+}) {
   return (
     <div
       className="group rounded-2xl border border-border bg-card shadow-sm hover:shadow-lg transition-all duration-300 p-6 cursor-pointer"
@@ -506,7 +535,11 @@ function FormerMemberCard({ member, year, onClick }: { member: any; year: string
         <div className="flex-shrink-0">
           <div className="overflow-hidden rounded-xl">
             <Avatar className="w-20 h-20">
-              <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+              <AvatarImage
+                src={member.image}
+                alt={member.name}
+                className="object-cover"
+              />
               <AvatarFallback className="bg-muted text-muted-foreground text-base font-semibold">
                 {member.name.slice(0, 2).toUpperCase()}
               </AvatarFallback>
@@ -535,7 +568,11 @@ function FormerMemberCard({ member, year, onClick }: { member: any; year: string
               className="flex-shrink-0 p-2 hover:bg-blue-50 rounded-lg transition-colors duration-200"
               onClick={(e) => e.stopPropagation()}
             >
-              <svg className="w-5 h-5 text-muted-foreground hover:text-blue-600 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-5 h-5 text-muted-foreground hover:text-blue-600 transition-colors"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
@@ -543,7 +580,8 @@ function FormerMemberCard({ member, year, onClick }: { member: any; year: string
 
           {/* Description/Bio */}
           <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
-            {member.bio || "Contribuiu para o crescimento do Instituto Nexus e deixou um legado importante para a comunidade acadêmica da UFABC."}
+            {member.bio ||
+              "Contribuiu para o crescimento do Instituto Nexus e deixou um legado importante para a comunidade acadêmica da UFABC."}
           </p>
         </div>
       </div>

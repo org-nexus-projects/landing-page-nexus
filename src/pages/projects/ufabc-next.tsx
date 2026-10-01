@@ -1,9 +1,16 @@
-import { Star, Users, BookOpen, TrendingUp, BarChart2, Shield } from "lucide-react";
+import {
+  Star,
+  Users,
+  BookOpen,
+  TrendingUp,
+  BarChart2,
+  Shield,
+} from "lucide-react";
 import { ProjectPage } from "#components/project-page";
 
 const UfabcNext = () => (
   <ProjectPage
-    logo="/projects/ufabc-next-mascot.png"
+    fullLogo="/projects/ufabc-next-full.png"
     logoAlt="UFABC Next"
     title="UFABC Next"
     tagline="A plataforma de avaliação acadêmica feita por alunos, para alunos."

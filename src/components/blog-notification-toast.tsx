@@ -5,7 +5,10 @@ interface BlogNotificationToastProps {
   onAction: () => void;
 }
 
-export function BlogNotificationToast({ onDismiss, onAction }: BlogNotificationToastProps) {
+export function BlogNotificationToast({
+  onDismiss,
+  onAction,
+}: BlogNotificationToastProps) {
   return (
     <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 pr-5 max-w-[380px] border border-gray-100 relative animate-slide-in">
       {/* Close Button */}
@@ -41,7 +44,8 @@ export function BlogNotificationToast({ onDismiss, onAction }: BlogNotificationT
             </span>
           </div>
           <p className="text-[14px] text-gray-600 leading-relaxed">
-            Novos posts publicados! Confira os últimos insights e atualizações da comunidade 🚀
+            Novos posts publicados! Confira os últimos insights e atualizações
+            da comunidade 🚀
           </p>
         </div>
       </div>

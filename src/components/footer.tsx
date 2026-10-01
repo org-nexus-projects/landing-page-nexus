@@ -5,18 +5,16 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3" style={{ gap: '15rem' }}>
+        <div className="grid md:grid-cols-3" style={{ gap: "15rem" }}>
           <div>
             <div className="flex items-center mb-4">
-                <img
-                  src="/brand/nexus-logo-white.png"
-                  alt="Nexus Logo"
-                  className="w-20 h-full"
-                />
+              <img
+                src="/brand/nexus-logo-white.png"
+                alt="Nexus Logo"
+                className="w-20 h-full"
+              />
             </div>
-            <p className="text-gray-400">
-              Uma rede para quem quer transformar
-            </p>
+            <p className="text-gray-400">Uma rede para quem quer transformar</p>
           </div>
 
           <div>
@@ -136,4 +134,3 @@ export default function Footer() {
     </footer>
   );
 }
-

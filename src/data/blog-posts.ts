@@ -1,90 +1,90 @@
-
 export interface Author {
-    name: string;
-    avatar: string;
-    role: string;
-    bio?: string;
-    social?: {
-        twitter?: string;
-        linkedin?: string;
-        github?: string;
-    };
-    // optional fields used by the author hover card
-    campus?: string;
-    curso?: string;
-    handle?: string;
+  name: string;
+  avatar: string;
+  role: string;
+  bio?: string;
+  social?: {
+    twitter?: string;
+    linkedin?: string;
+    github?: string;
+  };
+  // optional fields used by the author hover card
+  campus?: string;
+  curso?: string;
+  handle?: string;
 }
 
 export interface BlogPost {
-    id: string;
-    title: string;
-    excerpt: string;
-    content: string; // Now stores HTML instead of Markdown
-    image: string;
-    authors?: Author[]; // Multiple authors
-    date: string;
-    readTime: string;
-    categories: string[];
-    slug: string;
-    tags?: string[];
-    visible: boolean;
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string; // Now stores HTML instead of Markdown
+  image: string;
+  authors?: Author[]; // Multiple authors
+  date: string;
+  readTime: string;
+  categories: string[];
+  slug: string;
+  tags?: string[];
+  visible: boolean;
 }
 
 export const blogPostsDatabase: Record<string, BlogPost> = {
-    "my-server-is-down-what-do-i-do": {
-        id: "0",
-        title: "Mayday, o next caiu! E agora?",
-        excerpt: "Um guia completo sobre como diagnosticar e resolver problemas de servidor, desde volumes EBS até gerenciamento de filesystem no Linux.",
-        image: "/blog/blog-1/wallpaper/resizing-machines.png",
-        authors: [
-            {
-                name: "Gabriel Monteiro",
-                avatar: "/members/active/gabriel.jpeg",
-                role: "Fundador & CEO",
-                bio: "Gabriel é o Fundador e CEO do Nexus. Com paixão por construir ferramentas que capacitam estudantes, Gabriel lidera o time na criação de soluções inovadoras para a comunidade acadêmica.",
-                social: {
-                    twitter: "https://twitter.com/gabrielmonteiro",
-                    linkedin: "https://www.linkedin.com/in/gabriel-monteiro-rocha7/",
-                    github: "https://github.com/brMonteiro-G"
-                },
-                campus: "UFABC Santo André",
-                curso: "Ciência da Computação",
-                handle: "@gabrielmonteiro"
-            },
-            
-            {
-                name: "Joabe Silva",
-                avatar: "/members/active/joabe.jpeg",
-                role: "Cofundador & CTO",
-                bio: "Joabe é o Cofundador e CTO do Nexus, construindo soluções robustas e escaláveis no servidor. Adora resolver problemas complexos.",
-                social: {
-                    linkedin: "https://www.linkedin.com/in/joabesv/",
-                    github: "https://github.com/joabesilva"
-                },
-                campus: "UFABC Santo André",
-                curso: "Ciência da Computação",
-                handle: "@joabesilva"
-            },
-            {
-                name: "Nicolas Greco",
-                avatar: "/members/active/nicolas.jpeg",
-                role: "Diretor de Comunidade e Tecnologia",
-                bio: "Nicolas é o Diretor de Tecnologia do Nexus, liderando as iniciativas técnicas e garantindo que nossa infraestrutura funcione de forma suave e confiável. É apaixonado por automação e boas práticas.",
-                social: {
-                    linkedin: "https://www.linkedin.com/in/nicolas-greco-160a5b258/",
-                    github: "https://github.com/grecoww"
-                },
-                campus: "UFABC Santo André",
-                curso: "Ciência da Computação",
-                handle: "@nicolasgreco"
-            }
-        ],
-        date: "21 de Dezembro, 2025",
-        readTime: "8 min de leitura",
-        categories: ["technology", "next", ],
-        slug: "my-server-is-down-what-do-i-do",
-        tags: ["tecnologia", "servidor", "troubleshooting", "devops", "UFABC Next"],
-        content: `
+  "my-server-is-down-what-do-i-do": {
+    id: "0",
+    title: "Mayday, o next caiu! E agora?",
+    excerpt:
+      "Um guia completo sobre como diagnosticar e resolver problemas de servidor, desde volumes EBS até gerenciamento de filesystem no Linux.",
+    image: "/blog/blog-1/wallpaper/resizing-machines.png",
+    authors: [
+      {
+        name: "Gabriel Monteiro",
+        avatar: "/members/active/gabriel.jpeg",
+        role: "Fundador & CEO",
+        bio: "Gabriel é o Fundador e CEO do Nexus. Com paixão por construir ferramentas que capacitam estudantes, Gabriel lidera o time na criação de soluções inovadoras para a comunidade acadêmica.",
+        social: {
+          twitter: "https://twitter.com/gabrielmonteiro",
+          linkedin: "https://www.linkedin.com/in/gabriel-monteiro-rocha7/",
+          github: "https://github.com/brMonteiro-G",
+        },
+        campus: "UFABC Santo André",
+        curso: "Ciência da Computação",
+        handle: "@gabrielmonteiro",
+      },
+
+      {
+        name: "Joabe Silva",
+        avatar: "/members/active/joabe.jpeg",
+        role: "Cofundador & CTO",
+        bio: "Joabe é o Cofundador e CTO do Nexus, construindo soluções robustas e escaláveis no servidor. Adora resolver problemas complexos.",
+        social: {
+          linkedin: "https://www.linkedin.com/in/joabesv/",
+          github: "https://github.com/joabesilva",
+        },
+        campus: "UFABC Santo André",
+        curso: "Ciência da Computação",
+        handle: "@joabesilva",
+      },
+      {
+        name: "Nicolas Greco",
+        avatar: "/members/active/nicolas.jpeg",
+        role: "Diretor de Comunidade e Tecnologia",
+        bio: "Nicolas é o Diretor de Tecnologia do Nexus, liderando as iniciativas técnicas e garantindo que nossa infraestrutura funcione de forma suave e confiável. É apaixonado por automação e boas práticas.",
+        social: {
+          linkedin: "https://www.linkedin.com/in/nicolas-greco-160a5b258/",
+          github: "https://github.com/grecoww",
+        },
+        campus: "UFABC Santo André",
+        curso: "Ciência da Computação",
+        handle: "@nicolasgreco",
+      },
+    ],
+    date: "21 de Dezembro, 2025",
+    readTime: "8 min de leitura",
+    categories: ["technology", "next"],
+    slug: "my-server-is-down-what-do-i-do",
+    tags: ["tecnologia", "servidor", "troubleshooting", "devops", "UFABC Next"],
+    content: `
 <p class="mb-4">
 Sexta-feira, 18hrs. Tudo indicava o fim de uma semana tranquila quando, de repente, chega a mensagem:
 <strong>“O Next caiu.”</strong> Geralmente não gostamos de fazer deploy às sextas ou em finais de semana, então, se nada havia sido alterado, o que poderia ter acontecido?
@@ -227,58 +227,58 @@ O volume utilizado era do tipo <strong>NVMe (Non-Volatile Memory Express)</stron
   </p>
 </div>
 `,
-        visible: true,
-    },
-    "extension-ufabc-next": {
-        id: "1",
-        title: "Quero atualizar meus dados no UFABC Next, como faço?",
-        excerpt: "Um passo a passo para entender o funcionamento da extensão de atualização automática de dados do UFABC Next.",
-        image: "/blog/blog-2/wallpaper/image.png",
-        authors: [
-
-            {
-                name: "Nicolas Greco",
-                avatar: "/members/active/nicolas.jpeg",
-                role: "Diretor de Comunidade e Tecnologia",
-                bio: "Nicolas é o Diretor de Tecnologia do Nexus, liderando as iniciativas técnicas e garantindo que nossa infraestrutura funcione de forma suave e confiável. É apaixonado por automação e boas práticas.",
-                social: {
-                    linkedin: "https://www.linkedin.com/in/nicolas-greco-160a5b258/",
-                    github: "https://github.com/grecoww"
-                },
-                // optional fields for metadata
-                campus: "UFABC Santo André",
-                curso: "Ciência da Computação",
-                handle: "@nicolasgreco"
-            },
-        ],
-        date: "1 de Dezembro, 2025",
-        readTime: "6 min de leitura",
-        categories: ["technology"],
-        slug: "extension-ufabc-next",
-        tags: ["ufabc-next", "Tecnologia", "Comunidade"],
-        content: `<h2>Um conteúdo incrivel vindo por aí</h2>`,
-        visible: false,
-    }
+    visible: true,
+  },
+  "extension-ufabc-next": {
+    id: "1",
+    title: "Quero atualizar meus dados no UFABC Next, como faço?",
+    excerpt:
+      "Um passo a passo para entender o funcionamento da extensão de atualização automática de dados do UFABC Next.",
+    image: "/blog/blog-2/wallpaper/image.png",
+    authors: [
+      {
+        name: "Nicolas Greco",
+        avatar: "/members/active/nicolas.jpeg",
+        role: "Diretor de Comunidade e Tecnologia",
+        bio: "Nicolas é o Diretor de Tecnologia do Nexus, liderando as iniciativas técnicas e garantindo que nossa infraestrutura funcione de forma suave e confiável. É apaixonado por automação e boas práticas.",
+        social: {
+          linkedin: "https://www.linkedin.com/in/nicolas-greco-160a5b258/",
+          github: "https://github.com/grecoww",
+        },
+        // optional fields for metadata
+        campus: "UFABC Santo André",
+        curso: "Ciência da Computação",
+        handle: "@nicolasgreco",
+      },
+    ],
+    date: "1 de Dezembro, 2025",
+    readTime: "6 min de leitura",
+    categories: ["technology"],
+    slug: "extension-ufabc-next",
+    tags: ["ufabc-next", "Tecnologia", "Comunidade"],
+    content: `<h2>Um conteúdo incrivel vindo por aí</h2>`,
+    visible: false,
+  },
 };
 
 // Helper function to get all posts for listing
 export function getAllPosts(): BlogPost[] {
-    return Object.values(blogPostsDatabase);
+  return Object.values(blogPostsDatabase);
 }
 
 export function getVisiblePosts(): BlogPost[] {
-    return Object.values(blogPostsDatabase).filter(post => post.visible);
+  return Object.values(blogPostsDatabase).filter((post) => post.visible);
 }
 
 // Helper function to get a single post by slug
 export function getPostBySlug(slug: string): BlogPost | null {
-    return blogPostsDatabase[slug] || null;
+  return blogPostsDatabase[slug] || null;
 }
 
 // Helper function to get posts by category
 export function getPostsByCategory(category: string): BlogPost[] {
-    if (category === "all") {
-        return getAllPosts();
-    }
-    return getAllPosts().filter(post => post.categories.includes(category));
+  if (category === "all") {
+    return getAllPosts();
+  }
+  return getAllPosts().filter((post) => post.categories.includes(category));
 }

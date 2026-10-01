@@ -1,4 +1,11 @@
-import { Brain, Sparkles, MessageCircle, Zap, Bot, GraduationCap } from "lucide-react";
+import {
+  Brain,
+  Sparkles,
+  MessageCircle,
+  Zap,
+  Bot,
+  GraduationCap,
+} from "lucide-react";
 import { ProjectPage } from "#components/project-page";
 
 const TamanduAi = () => (

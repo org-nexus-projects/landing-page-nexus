@@ -1,4 +1,11 @@
-import { MessageCircle, Bell, Clock, Users, Smartphone, Shield } from "lucide-react";
+import {
+  MessageCircle,
+  Bell,
+  Clock,
+  Users,
+  Smartphone,
+  Shield,
+} from "lucide-react";
 import { ProjectPage } from "#components/project-page";
 
 const Communications = () => (

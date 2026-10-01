@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -79,8 +78,17 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Exo 2', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family:
+      "Exo 2",
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      system-ui,
+      sans-serif;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 }
 
@@ -92,7 +100,8 @@
     padding: 1.5rem !important;
     font-size: 0.875rem;
     line-height: 1.7;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    font-family:
+      "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
     background-color: #0d1117 !important; /* GitHub dark theme background */
   }
 
@@ -126,7 +135,8 @@
   pre code {
     background: transparent !important;
     color: inherit !important;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    font-family:
+      "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
   }
 
   /* Inline code */
@@ -137,9 +147,15 @@
 
   /* Custom Toast Styles */
   [data-sonner-toast] {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif !important;
   }
-  
+
   [data-sonner-toast][data-styled="true"] {
     border-radius: 12px !important;
   }
@@ -187,9 +203,10 @@
 
   /* Blog Image Shadow - Top and Bottom */
   .blog-image-shadow {
-    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 
-                0 -2px 4px -1px rgba(0, 0, 0, 0.06),
-                0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow:
+      0 -4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 -2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 }

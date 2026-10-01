@@ -32,17 +32,25 @@ interface NavLinkProps {
 
 function NavBarLink({ to, children, hasDropdown }: NavLinkProps) {
   return (
-    <a 
-      href={to} 
+    <a
+      href={to}
       className="relative text-[15px] font-medium text-foreground/70 hover:text-foreground transition-colors duration-200 px-1 py-1"
     >
       {children}
-      {hasDropdown && <ChevronDown className="inline-block h-3.5 w-3.5 ml-1 opacity-60" />}
+      {hasDropdown && (
+        <ChevronDown className="inline-block h-3.5 w-3.5 ml-1 opacity-60" />
+      )}
     </a>
   );
 }
 
-function NavDropdown({ label, items }: { label: string; items: { label: string; href: string }[] }) {
+function NavDropdown({
+  label,
+  items,
+}: {
+  label: string;
+  items: { label: string; href: string }[];
+}) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="relative text-[15px] font-medium text-foreground/70 hover:text-foreground transition-colors duration-200 outline-none px-1 py-1">
@@ -62,10 +70,18 @@ function NavDropdown({ label, items }: { label: string; items: { label: string; 
   );
 }
 
-function MobileNavLink({ to, onClick, children }: { to: string; onClick: () => void; children: React.ReactNode }) {
+function MobileNavLink({
+  to,
+  onClick,
+  children,
+}: {
+  to: string;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
   return (
-    <a 
-      href={to} 
+    <a
+      href={to}
       onClick={onClick}
       className="text-foreground/80 hover:text-foreground text-[15px] font-medium transition-colors duration-200 py-2 block"
     >
@@ -82,9 +98,8 @@ export default function NavBar() {
     { label: "Time", href: "/team" },
   ];
 
-  const docsDropdown = [  
+  const docsDropdown = [
     { label: "UFABC Parser", href: "https://ufabc-parser.com/docs" },
-  
   ];
 
   return (
@@ -93,39 +108,35 @@ export default function NavBar() {
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo - Bold & Left Aligned */}
           <div className="flex items-center">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="flex items-center gap-3 hover:opacity-90 transition-opacity duration-200"
             >
-              <img 
-                src="/brand/nexus-logo-blue.png" 
-                alt="Nexus Logo" 
-                className="h-7 w-auto" 
+              <img
+                src="/brand/nexus-logo-blue.png"
+                alt="Nexus Logo"
+                className="h-7 w-auto"
               />
             </Link>
           </div>
-          
+
           {/* Center Navigation - Generous Spacing */}
           <nav className="hidden lg:flex items-center gap-10">
+            <NavDropdown label="Projetos" items={dropDownProjects} />
 
-           <NavDropdown label="Projetos" items={dropDownProjects} />
-            
             <span className="h-4 w-px bg-border/60" aria-hidden="true" />
 
             <NavBarLink to="/blog">Blog</NavBarLink>
-            
+
             <span className="h-4 w-px bg-border/60" aria-hidden="true" />
-            
 
             <NavBarLink to="/team">Time</NavBarLink>
 
-
             <span className="h-4 w-px bg-border/60" aria-hidden="true" />
-            
+
             <NavDropdown label="Documentação" items={docsDropdown} />
-            
           </nav>
-          
+
           <div className="hidden lg:flex items-center gap-6">
             <VolunteerDialog type="volunteer" buttonText="Junte-se a nós" />
           </div>
@@ -135,56 +146,76 @@ export default function NavBar() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="rounded-lg">
-                  {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                  {isOpen ? (
+                    <X className="h-5 w-5" />
+                  ) : (
+                    <Menu className="h-5 w-5" />
+                  )}
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[320px] sm:w-[400px]">
-                  <SheetTitle className="flex items-center gap-3">
-                    <img src="/brand/nexus-logo-blue.png" alt="Nexus" className="h-full w-20" />
-                  </SheetTitle>
+                <SheetTitle className="flex items-center gap-3">
+                  <img
+                    src="/brand/nexus-logo-blue.png"
+                    alt="Nexus"
+                    className="h-full w-20"
+                  />
+                </SheetTitle>
 
-                  
-                  <nav className="flex flex-col gap-6 mt-8">
-                    
+                <nav className="flex flex-col gap-6 mt-8">
+                  <div className="border-t pt-6 space-y-2">
+                    {resourcesDropdown.map((item) => (
+                      <MobileNavLink
+                        key={item.href}
+                        to={item.href}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </MobileNavLink>
+                    ))}
+                  </div>
+                  <div className="border-t pt-6 space-y-2">
+                    <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                      Documentação
+                    </p>
+                    {docsDropdown.map((item) => (
+                      <MobileNavLink
+                        key={item.href}
+                        to={item.href}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </MobileNavLink>
+                    ))}
+                  </div>
 
-                    <div className="border-t pt-6 space-y-2">
-                      {resourcesDropdown.map((item) => (
-                        <MobileNavLink key={item.href} to={item.href} onClick={() => setIsOpen(false)}>
-                          {item.label}
-                        </MobileNavLink>
-                      ))}
-                    </div>
-                    <div className="border-t pt-6 space-y-2">
-                       <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                        Documentação
-                      </p>
-                      {docsDropdown.map((item) => (
-                        <MobileNavLink key={item.href} to={item.href} onClick={() => setIsOpen(false)}>
-                          {item.label}
-                        </MobileNavLink>
-                      ))}
-                    </div>
+                  <div className="border-t pt-6 space-y-2">
+                    <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                      Projetos
+                    </p>
+                    {dropDownProjects.map((item) => (
+                      <MobileNavLink
+                        key={item.href}
+                        to={item.href}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </MobileNavLink>
+                    ))}
+                  </div>
 
-                    <div className="border-t pt-6 space-y-2">
-                      <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                        Projetos
-                      </p>
-                      {dropDownProjects.map((item) => (
-                        <MobileNavLink key={item.href} to={item.href} onClick={() => setIsOpen(false)}>
-                          {item.label}
-                        </MobileNavLink>
-                      ))}
-                    </div>
-
-                    <div className="border-t pt-6">
-                      <VolunteerDialog buttonText="Junte-se a nós" type="volunteer" />
-                    </div>
-                  </nav>
-                </SheetContent>
-              </Sheet>
-            </div>
+                  <div className="border-t pt-6">
+                    <VolunteerDialog
+                      buttonText="Junte-se a nós"
+                      type="volunteer"
+                    />
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
-      </header>
-    );
-  }
+      </div>
+    </header>
+  );
+}

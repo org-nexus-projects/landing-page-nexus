@@ -13,9 +13,10 @@ const blogPosts: BlogPost[] = getVisiblePosts();
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const filteredPosts = selectedCategory === "all" 
-    ? blogPosts
-    : blogPosts.filter(post => post.categories.includes(selectedCategory));
+  const filteredPosts =
+    selectedCategory === "all"
+      ? blogPosts
+      : blogPosts.filter((post) => post.categories.includes(selectedCategory));
 
   return (
     <div className="min-h-screen bg-background">
@@ -42,9 +43,10 @@ export default function Blog() {
               onClick={() => setSelectedCategory(category.id)}
               className={`
                 rounded-full px-6 py-2 font-medium transition-all duration-200
-                ${selectedCategory === category.id 
-                  ? "shadow-md scale-105" 
-                  : "hover:scale-105 hover:shadow-sm hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200"
+                ${
+                  selectedCategory === category.id
+                    ? "shadow-md scale-105"
+                    : "hover:scale-105 hover:shadow-sm hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200"
                 }
               `}
             >
@@ -77,14 +79,14 @@ export default function Blog() {
 
 export function BlogCard({ post }: { post: BlogPost }) {
   return (
-    <Link 
+    <Link
       to={`/blog/${post.slug}`}
-      className="group block rounded-2xl overflow-hidden bg-card border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      className="group block rounded-2xl overflow-hidden bg-white border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
     >
       {/* Image */}
       <div className="aspect-[16/9] overflow-hidden bg-muted">
-        <img 
-          src={post.image} 
+        <img
+          src={post.image}
           alt={post.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
@@ -94,7 +96,9 @@ export function BlogCard({ post }: { post: BlogPost }) {
         {/* Category Badge */}
         <div className="flex flex-wrap gap-2">
           {post.categories.map((categoryId) => {
-            const category = blog_categories.find((item) => item.id === categoryId);
+            const category = blog_categories.find(
+              (item) => item.id === categoryId,
+            );
 
             return (
               <span
@@ -120,7 +124,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
         {/* Author Section */}
         <div className="flex items-center gap-3 pt-2">
           <div className="flex -space-x-2 items-center">
-            {(post.authors).slice(0, 3).map((a, i) => (
+            {post.authors.slice(0, 3).map((a, i) => (
               <div key={i} className="rounded-full ring-2 ring-card bg-card">
                 <Avatar className="h-8 w-8 border-2">
                   <AvatarImage src={a.avatar} alt={a.name} />
@@ -128,13 +132,15 @@ export function BlogCard({ post }: { post: BlogPost }) {
                 </Avatar>
               </div>
             ))}
-            {(post.authors && post.authors.length > 3) && (
-              <div className="ml-2 text-xs text-muted-foreground">+{post.authors.length - 3}</div>
+            {post.authors && post.authors.length > 3 && (
+              <div className="ml-2 text-xs text-muted-foreground">
+                +{post.authors.length - 3}
+              </div>
             )}
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium truncate">
-              {post.authors[0].name + ` e +${post.authors.length - 1}` }
+              {post.authors[0].name + ` e +${post.authors.length - 1}`}
             </p>
             <p className="text-xs text-muted-foreground">{post.date}</p>
           </div>

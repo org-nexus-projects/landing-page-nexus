@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
-import { codeToHtml } from 'shiki';
+import { useEffect, useState } from "react";
+import { codeToHtml } from "shiki";
 
 interface CodeBlockProps {
   code: string;
   lang?: string;
 }
 
-export function CodeBlock({ code, lang = 'bash' }: CodeBlockProps) {
-  const [html, setHtml] = useState('');
-  
+export function CodeBlock({ code, lang = "bash" }: CodeBlockProps) {
+  const [html, setHtml] = useState("");
+
   useEffect(() => {
     codeToHtml(code.trim(), {
       lang,
-      theme: 'github-dark',
+      theme: "github-dark",
     }).then(setHtml);
   }, [code, lang]);
 
@@ -25,7 +25,7 @@ export function CodeBlock({ code, lang = 'bash' }: CodeBlockProps) {
   }
 
   return (
-    <div 
+    <div
       className="my-6 rounded-lg overflow-hidden shadow-lg [&_pre]:!m-0 [&_pre]:!p-6"
       dangerouslySetInnerHTML={{ __html: html }}
     />

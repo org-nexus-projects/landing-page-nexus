@@ -7,6 +7,7 @@ This guide explains how to add new blog posts to the Nexus blog.
 All blog posts are centrally managed in `/src/data/blogPosts.ts`. To add a new post:
 
 ### 1. Open the blog posts file
+
 ```
 src/data/blogPosts.ts
 ```
@@ -16,17 +17,18 @@ src/data/blogPosts.ts
 ```typescript
 export const blogPostsDatabase: Record<string, BlogPost> = {
   // ... existing posts
-  
+
   "your-post-slug": {
     id: "unique-id",
     title: "Your Post Title",
-    excerpt: "A brief summary of your post that appears on the blog listing page.",
+    excerpt:
+      "A brief summary of your post that appears on the blog listing page.",
     image: "/blog/wallpaper/your-image.png",
     author: {
       name: "Author Name",
       avatar: "/members/author-avatar.jpeg",
       role: "Author Role",
-      bio: "Brief author biography that appears at the bottom of the post."
+      bio: "Brief author biography that appears at the bottom of the post.",
     },
     date: "Dec 6, 2025",
     readTime: "5 min read",
@@ -58,8 +60,8 @@ Inline code: \`npm install\`
 
 ### Bold and Italic
 **Bold text** and *italic text*
-    `
-  }
+    `,
+  },
 };
 ```
 
@@ -83,6 +85,7 @@ Inline code: \`npm install\`
 ### 4. Categories
 
 Available categories:
+
 - `technology` - Technical posts, tutorials, code
 - `community` - Community updates, events, stories
 - `tutorials` - Step-by-step guides
@@ -92,8 +95,9 @@ Available categories:
 ### 5. Markdown Support
 
 The blog supports:
+
 - Headers (##, ###, ####)
-- **Bold** and *italic* text
+- **Bold** and _italic_ text
 - `Inline code`
 - Code blocks with syntax highlighting
 - Lists (bullet and numbered)
@@ -103,13 +107,15 @@ The blog supports:
 ### 6. Images
 
 Store blog images in:
+
 ```
 /public/blog/wallpaper/your-image.png
 ```
 
 Then reference them in your post:
+
 ```typescript
-image: "/blog/wallpaper/your-image.png"
+image: "/blog/wallpaper/your-image.png";
 ```
 
 ## Example Post
@@ -156,6 +162,7 @@ You're now ready to start using Nexus!
 ## URL Structure
 
 Posts will be accessible at:
+
 ```
 https://your-domain.com/blog/your-post-slug
 ```
@@ -163,6 +170,7 @@ https://your-domain.com/blog/your-post-slug
 ## Testing
 
 After adding a post:
+
 1. Restart the dev server if needed
 2. Visit `/blog` to see your post in the listing
 3. Click on it to view the full post
