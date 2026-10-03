@@ -25,6 +25,7 @@ export interface ProjectPageProps {
   logo?: string;
   logoAlt: string;
   fullLogo?: string;
+  customColor?: string;
   title: string;
   tagline: string;
   description: string;
@@ -45,6 +46,7 @@ export function ProjectPage({
   logo,
   logoAlt,
   fullLogo,
+  customColor,
   title,
   tagline,
   description,
@@ -56,8 +58,24 @@ export function ProjectPage({
   ctaOnClick,
   secondaryCta,
 }: ProjectPageProps) {
+  const customStyles = customColor
+    ? ({ "--project-color": customColor } as React.CSSProperties)
+    : undefined;
+
+  const btnClass = customColor
+    ? "bg-[var(--project-color)] hover:bg-[var(--project-color)] hover:opacity-90 text-white px-8"
+    : "bg-primary hover:bg-primary/90 text-white px-8";
+
+  const textClass = customColor
+    ? "text-[var(--project-color)]"
+    : "text-primary";
+
+  const dotClass = customColor
+    ? "bg-[var(--project-color)]"
+    : "bg-primary";
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={customStyles}>
       <NavBar />
 
       <main className="max-w-5xl mx-auto px-6">
@@ -94,7 +112,7 @@ export function ProjectPage({
               <a href={ctaHref} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white px-8"
+                  className={btnClass}
                 >
                   {ctaText}
                   <ExternalLink className="ml-2" size={16} />
@@ -103,7 +121,7 @@ export function ProjectPage({
             ) : (
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8"
+                className={btnClass}
                 onClick={ctaOnClick}
               >
                 {ctaText}
@@ -140,7 +158,7 @@ export function ProjectPage({
           >
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                <div className={`text-4xl md:text-5xl font-bold ${textClass} mb-2`}>
                   {stat.value}
                 </div>
                 <p className="text-sm text-gray-500 font-medium">
@@ -159,7 +177,7 @@ export function ProjectPage({
           <div className="grid md:grid-cols-3 gap-10">
             {features.map((feature, i) => (
               <div key={i} className="space-y-3">
-                <div className="text-primary">{feature.icon}</div>
+                <div className={textClass}>{feature.icon}</div>
                 <h3 className="text-lg font-semibold text-gray-900">
                   {feature.title}
                 </h3>
@@ -183,8 +201,8 @@ export function ProjectPage({
                 <div className="space-y-12 pl-8">
                   {timeline.map((item, i) => (
                     <div key={i} className="relative">
-                      <div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-white" />
-                      <div className="text-xs font-semibold text-primary mb-1 uppercase tracking-widest">
+                      <div className={`absolute -left-[33px] top-1 w-3 h-3 rounded-full ${dotClass} ring-4 ring-white`} />
+                      <div className={`text-xs font-semibold ${textClass} mb-1 uppercase tracking-widest`}>
                         {item.year}
                       </div>
                       <h3 className="text-base font-semibold text-gray-900 mb-1">
@@ -215,7 +233,7 @@ export function ProjectPage({
               <a href={ctaHref} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white px-8"
+                  className={btnClass}
                 >
                   {ctaText}
                   <ExternalLink className="ml-2" size={16} />
@@ -224,7 +242,7 @@ export function ProjectPage({
             ) : (
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8"
+                className={btnClass}
                 onClick={ctaOnClick}
               >
                 {ctaText}

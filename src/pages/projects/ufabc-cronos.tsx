@@ -13,6 +13,7 @@ const UfabcCronos = () => (
     fullLogo="/projects/ufabc-cronos-green-full.png"
     logoAlt="UFABC Cronos"
     title="UFABC Cronos"
+    customColor="#095839"
     tagline="Monte a graduação que vai gerar mais valor para a sua vida."
     description="Um planejador de graduação inteligente que cruza seu perfil, objetivos de carreira e as avaliações da comunidade para ajudar você a construir o percurso acadêmico ideal na UFABC."
     stats={[
