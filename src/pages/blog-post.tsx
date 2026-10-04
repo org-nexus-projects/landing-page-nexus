@@ -171,9 +171,7 @@ export default function BlogPost() {
           <AuthorsHoverRow authors={authors} />
 
           <Button
-            variant="outline"
             size="sm"
-            className="hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200"
             onClick={handleShareClick}
           >
             {copied ? (
@@ -202,7 +200,7 @@ export default function BlogPost() {
         {/* Content */}
         <div
           className="prose prose-lg prose-slate max-w-none dark:prose-invert
-          prose-headings:font-bold 
+          prose-headings:font-bold
           prose-headings:tracking-tight
           prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
           prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
@@ -233,7 +231,7 @@ export default function BlogPost() {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 rounded-full text-sm bg-muted hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer"
+                  className="px-3 py-1 rounded-full text-sm bg-muted hover:bg-blue-50 hover:text-blue-600 transition-colors"
                 >
                   {tag}
                 </span>
@@ -279,10 +277,7 @@ export default function BlogPost() {
         {/* Navigation */}
         <div className="mt-12 pt-8 border-t flex justify-between items-center">
           <Link to="/blog">
-            <Button
-              variant="outline"
-              className="hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200"
-            >
+            <Button>
               <ArrowLeft className="mr-2 h-4 w-4" />
               Todos os Posts
             </Button>
@@ -311,22 +306,7 @@ export default function BlogPost() {
   );
 }
 
-// Authors hover row: small avatar list where hovering/focus shows a floating author card
 function AuthorsHoverRow({ authors }: { authors: Author[] }) {
-  function computeLocalTime(tz?: string) {
-    if (!tz) return null;
-    // Expect simple form like 'UTC', 'UTC+2', 'UTC-3', 'UTC+5:30'
-    const m = tz.match(/UTC([+-]\d+)(?::(\d+))?/);
-    if (!m) return null;
-    const hours = parseInt(m[1], 10);
-    const mins = m[2] ? parseInt(m[2], 10) : 0;
-    const now = new Date();
-    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-    const offsetMinutes = hours * 60 + (hours >= 0 ? mins : -mins);
-    const local = new Date(utc + offsetMinutes * 60000);
-    return local.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-  }
-
   return (
     <div className="mb-8">
       <div className="flex items-center gap-3">

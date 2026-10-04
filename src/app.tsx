@@ -4,6 +4,7 @@ import { TooltipProvider } from "#components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DynamicTitle from "#components/dynamic-title";
+import ScrollToTop from "#components/scroll-to-top";
 import Index from "./pages/index";
 import NotFound from "./pages/not-found";
 import Team from "./pages/team";
@@ -26,6 +27,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <DynamicTitle />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />

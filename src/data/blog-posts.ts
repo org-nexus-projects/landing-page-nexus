@@ -83,7 +83,7 @@ export const blogPostsDatabase: Record<string, BlogPost> = {
     readTime: "8 min de leitura",
     categories: ["technology", "next"],
     slug: "my-server-is-down-what-do-i-do",
-    tags: ["tecnologia", "servidor", "troubleshooting", "devops", "UFABC Next"],
+    tags: ["Tecnologia", "Servidor", "Troubleshooting", "DevOps", "UFABC Next"],
     content: `
 <p class="mb-4">
 Sexta-feira, 18hrs. Tudo indicava o fim de uma semana tranquila quando, de repente, chega a mensagem:
@@ -98,7 +98,7 @@ Como todo engenheiro de software naturalmente cético, a primeira reação foi: 
      class="rounded-lg shadow-md my-6" />
 
 <p class="mb-6">
-De fato, havia um problema. O erro retornado era do <strong>nginx</strong>, que, em analogia, funciona como o porteiro da aplicação. Quando ele começa a reclamar, normalmente significa que, como porteiro, sua função de ligar nos apartamentos e liberar a entrada não está funcionando bem, ou seja, a aplicação que ele deveria encaminhar simplesmente não está respondendo ou não está lá. 
+De fato, havia um problema. O erro retornado era do <strong>nginx</strong>, que, em analogia, funciona como o porteiro da aplicação. Quando ele começa a reclamar, normalmente significa que, como porteiro, sua função de ligar nos apartamentos e liberar a entrada não está funcionando bem, ou seja, a aplicação que ele deveria encaminhar simplesmente não está respondendo ou não está lá.
 </p>
 
 <p class="mb-6">
@@ -129,7 +129,7 @@ Na arquitetura de sistemas escolhida, usamos um serviço chamado EC2 para hosped
      class="rounded-lg blog-image-shadow my-6" />
 
 <p class="mb-6">
-Recriar a instância, deu um pequeno sinal, finalmente conseguimos conectar na máquina através da linha de comando, o que permitiu um diagnóstico mais detalhado. Percebemos então que, o nossos componentes internos estavam sem comunicação, o porteiro, <strong>nginx</strong> não reconhecia nenhum tipo de contato com o sistema responsável por separar os apartamentos, seguindo a nossa analogia. Esse sistema chamado Docker, veja figura 1.2, é importante para o processo de muitas maneiras que não cabem aqui explicar mas o importante é que assim como os demais programas, por quê não tentar reiniciar? Aqui vimos uma falha importante, ao executar o comando  <code>service docker restart</code> não tivemos sucesso, na verdade, os logs indicavam erros bem estranhos.   
+Recriar a instância, deu um pequeno sinal, finalmente conseguimos conectar na máquina através da linha de comando, o que permitiu um diagnóstico mais detalhado. Percebemos então que, o nossos componentes internos estavam sem comunicação, o porteiro, <strong>nginx</strong> não reconhecia nenhum tipo de contato com o sistema responsável por separar os apartamentos, seguindo a nossa analogia. Esse sistema chamado Docker, veja figura 1.2, é importante para o processo de muitas maneiras que não cabem aqui explicar mas o importante é que assim como os demais programas, por quê não tentar reiniciar? Aqui vimos uma falha importante, ao executar o comando  <code>service docker restart</code> não tivemos sucesso, na verdade, os logs indicavam erros bem estranhos.
  </p>
 
 <img src="/blog/blog-1/content/server-components.png" alt="componentes"
@@ -223,7 +223,7 @@ O volume utilizado era do tipo <strong>NVMe (Non-Volatile Memory Express)</stron
 
 <div class="mt-12 p-6 bg-gradient-to-br from-blue-50/50 to-slate-100/50 dark:from-blue-900/10 dark:to-blue-800/10 rounded-2xl border-2 border-blue-100 dark:border-blue-900">
   <p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-    Se você gostaria de <strong>aprender tecnologia a partir de vivências práticas</strong> e <strong>impactar a comunidade acadêmica da Universidade Federal do ABC</strong> no processo. Esse lugar é para você, venha fazer parte do time, <strong>inscrições em breve</strong>!
+    Se você gostaria de <strong>aprender tecnologia a partir de vivências práticas</strong> e <strong>impactar a comunidade acadêmica da Universidade Federal do ABC</strong> no processo. Esse lugar é para você, venha fazer parte do time!
   </p>
 </div>
 `,

@@ -317,11 +317,10 @@ const LandingPage = () => {
               })}
             </div>
 
-            {/* View All Link */}
             <div className="mt-16 text-center">
               <a
                 href="/blog"
-                className="inline-flex items-center gap-2 text-[15px] font-medium text-foreground/70 hover:text-foreground transition-colors duration-200 group"
+                className="inline-flex items-center gap-1 text-[15px] text-white py-3 px-6 rounded-2xl font-medium bg-primary hover:bg-blue-600 hover:text-foreground transition-colors duration-200 group"
               >
                 Ver todos os posts
                 <svg
