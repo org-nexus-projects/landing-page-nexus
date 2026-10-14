@@ -281,7 +281,7 @@ const LandingPage = () => {
               Governança Nexus
             </h2>
             <p className="text-xl text-white/80 text-center max-w-3xl mx-auto mb-16">
-              A estrutura organizacional da UFABC Next garante planejamento,
+              A estrutura organizacional do nexus garante planejamento,
               execução e impacto contínuo. Cada área é liderada por estudantes
               com alta responsabilidade e engajamento.
             </p>
